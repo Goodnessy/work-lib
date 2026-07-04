@@ -1,121 +1,86 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Work-Lib｜温和的工作知识库</title>
-  <meta name="description" content="Work-Lib：温和的工作知识库，沉淀 Daily Brief、深度推荐、半月刊、收藏与方法论。" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body class="home" data-page="home">
-  <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Work-Lib 首页">
-      <span class="brand-mark">W</span>
-      <span>
-        <strong>Work-Lib</strong>
-        <em>温和的工作知识库</em>
-      </span>
-    </a>
-    <nav class="desktop-nav" aria-label="主导航">
-      <a href="index.html" data-nav="home">首页</a>
-      <a href="library.html" data-nav="library">内容库</a>
-      <a href="magazine.html" data-nav="magazine">半月刊</a>
-      <a href="favorites.html" data-nav="favorites">收藏</a>
-      <a href="methods.html" data-nav="methods">方法论</a>
-    </nav>
-    <button class="icon-button" id="openSearch" aria-label="打开搜索">⌕</button>
-  </header>
-  <main class="page home-page">
-    <section class="hero-workbench">
-      <div class="hero-main">
-        <div class="eyebrow">今日工作台 · 周末深读版</div>
-        <h1 id="todayTitle">把员工活动宣传从海报通知，升级成传播链路</h1>
-        <p id="todayConclusion">好的活动不是结束在现场，而是开始于传播；真正有价值的活动，会被员工看见、理解、记住并再次讲述。</p>
-        <div class="tag-row" id="todayTags"></div>
-        <div class="hero-actions">
-          <a class="primary-btn" href="library.html">进入内容库</a>
-          <a class="ghost-btn" href="article.html?id=activity-communication-chain">阅读深度推荐</a>
-        </div>
-      </div>
-      <aside class="hero-side">
-        <div class="date-card">
-          <span>2026</span>
-          <strong>07/04</strong>
-          <em>星期六</em>
-        </div>
-        <div class="today-action">
-          <small>今日行动</small>
-          <p>用 10 分钟，为最近一个活动增加“一句话活动回声”收集机制。</p>
-        </div>
-      </aside>
-    </section>
-
-    <section class="core-section">
-      <div class="section-head">
-        <span>Core Archive</span>
-        <h2>核心沉淀</h2>
-        <p>这里放真正值得回看、复盘和长期复用的内容。</p>
-      </div>
-      <div class="core-grid">
-        <a class="core-card magazine-card" href="magazine.html">
-          <small>Magazine</small>
-          <h3>半月刊</h3>
-          <p>阶段性整理趋势、案例、深度推荐与行动建议，不做日报拼接，而做重新编辑。</p>
-          <span>查看半月刊 →</span>
-        </a>
-        <a class="core-card favorite-card" href="favorites.html">
-          <small>Collection</small>
-          <h3>值得收藏</h3>
-          <p>只保留高价值内容：方法论、案例库、工具箱、灵感库，适合反复查阅。</p>
-          <span>进入收藏 →</span>
-        </a>
-        <a class="core-card method-card" href="methods.html">
-          <small>Method</small>
-          <h3>方法论</h3>
-          <p>把零散经验整理成可复制的活动策划、企业传播、EAP、AI 应用方法。</p>
-          <span>查看方法论 →</span>
-        </a>
-      </div>
-    </section>
-
-    <section class="library-preview">
-      <div class="section-head compact">
-        <span>Library</span>
-        <h2>内容库</h2>
-        <p>默认按时间排列，可以通过搜索、关键词和标签快速回顾。</p>
-      </div>
-      <div class="inline-search">
-        <input id="homeSearchInput" type="search" placeholder="搜索内容：家庭日 / EAP / 海报 / AI / 生物医药..." />
-      </div>
-      <div class="quick-tags" id="homeQuickTags"></div>
-      <div class="entry-grid" id="homeEntryGrid"></div>
-      <div class="center-actions">
-        <a class="ghost-btn" href="library.html">查看完整内容库 →</a>
-      </div>
-    </section>
-  </main>
-  <footer class="site-footer">
-    <p>© 2026 Work-Lib · Built for Wenhe</p>
-  </footer>
-  <nav class="bottom-nav" aria-label="移动端导航">
-    <a href="index.html">⌂<span>首页</span></a>
-    <a href="library.html">☷<span>内容</span></a>
-    <a href="magazine.html">▣<span>半月刊</span></a>
-    <a href="favorites.html">★<span>收藏</span></a>
-    <a href="methods.html">◇<span>方法</span></a>
+<head><meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Work-Lib｜温和的工作知识库</title>
+<meta name="description" content="Work-Lib：每日简报、半月刊、灵感库、方法论。" />
+<link rel="stylesheet" href="style.css" /></head>
+<body data-page="home">
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <span class="brand-icon">W</span>
+    <span><strong>Work-Lib</strong><em>温和的工作知识库</em></span>
+  </a>
+  <nav class="top-nav">
+    <a href="index.html" data-nav="home">首页</a>
+    <a href="daily.html" data-nav="daily">每日简报</a>
+    <a href="magazine.html" data-nav="magazine">半月刊</a>
+    <a href="inspiration.html" data-nav="collection">灵感库</a>
+    <a href="methods.html" data-nav="methods">方法论</a>
   </nav>
-  <div class="search-overlay" id="searchOverlay" aria-hidden="true">
-    <div class="search-modal">
-      <div class="modal-top">
-        <h2>搜索 Work-Lib</h2>
-        <button class="icon-button" id="closeSearch" aria-label="关闭搜索">×</button>
-      </div>
-      <input id="globalSearchInput" class="search-input" type="search" placeholder="搜索：家庭日 / EAP / 海报 / AI / 生物医药..." />
-      <div class="quick-tags" id="globalQuickTags"></div>
-      <div class="search-results" id="globalSearchResults"></div>
+  <a class="search-link" href="search.html">搜索</a>
+</header>
+<main class="home">
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="kicker">今日主读</p>
+      <h1 id="homeTitle">把员工活动宣传升级为一条可持续的沟通链路</h1>
+      <p class="lead" id="homeSummary">从“发一条消息”到“形成一次连接”，让每一次活动被看见、被理解、被记住，最终沉淀为组织文化的正向循环。</p>
+      <div class="tag-row" id="homeTags"></div>
+      <a class="primary" id="homeIssueLink" href="issue.html?id=daily-2026-07-04">阅读今日简报</a>
     </div>
-  </div>
-  <script src="data.js"></script>
-  <script src="script.js"></script>
+    <aside class="today-card">
+      <div class="date-line" id="homeDate">07 / 04</div>
+      <p class="small-label">今日行动</p>
+      <p id="homeAction">用 10 分钟，为最近一个活动增加“一句话活动回声”收集机制。</p>
+      <a id="homeActionLink" href="issue.html?id=daily-2026-07-04">查看详情 →</a>
+    </aside>
+  </section>
+
+  <section class="core">
+    <div class="section-title">
+      <p>CORE ARCHIVE</p>
+      <h2>核心沉淀</h2>
+      <span>精选内容沉淀为可复用的工作资产</span>
+    </div>
+    <div class="core-grid">
+      <a class="core-card" href="magazine.html">
+        <div class="icon">◇</div>
+        <h3>半月刊</h3>
+        <p>每半个月重新编辑一次，整理趋势、案例、洞察与方法。</p>
+        <span>进入半月刊 →</span>
+      </a>
+      <a class="core-card" href="inspiration.html">
+        <div class="icon">☆</div>
+        <h3>灵感库</h3>
+        <p>经过筛选后留下的案例、选题、视觉、工具与创意线索，适合反复查阅、持续启发。</p>
+        <span>进入灵感库 →</span>
+      </a>
+      <a class="core-card" href="methods.html">
+        <div class="icon">#</div>
+        <h3>方法论</h3>
+        <p>可复用的工作模型、行动清单与表达框架，帮助你把灵感变成行动。</p>
+        <span>进入方法论 →</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="data-strip">
+    <div class="stat-list" id="homeStats"></div>
+    <div class="tag-cloud" id="homeHotTags"></div>
+  </section>
+</main>
+<footer class="site-footer">
+  <p>© 2026 Work-Lib · 持续沉淀，长期复用</p>
+</footer>
+<nav class="bottom-nav">
+  <a href="index.html">首页</a>
+  <a href="daily.html">简报</a>
+  <a href="magazine.html">半月刊</a>
+  <a href="inspiration.html">灵感库</a>
+  <a href="methods.html">方法论</a>
+</nav>
+<script src="data.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
