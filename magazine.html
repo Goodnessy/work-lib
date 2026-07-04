@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work-Lib｜温和的工作知识库</title>
+  <meta name="description" content="Work-Lib：温和的工作知识库，沉淀 Daily Brief、深度推荐、半月刊、收藏与方法论。" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="" data-page="magazine">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Work-Lib 首页">
+      <span class="brand-mark">W</span>
+      <span>
+        <strong>Work-Lib</strong>
+        <em>温和的工作知识库</em>
+      </span>
+    </a>
+    <nav class="desktop-nav" aria-label="主导航">
+      <a href="index.html" data-nav="home">首页</a>
+      <a href="library.html" data-nav="library">内容库</a>
+      <a href="magazine.html" data-nav="magazine">半月刊</a>
+      <a href="favorites.html" data-nav="favorites">收藏</a>
+      <a href="methods.html" data-nav="methods">方法论</a>
+    </nav>
+    <button class="icon-button" id="openSearch" aria-label="打开搜索">⌕</button>
+  </header>
+  <main class="page">
+    <section class="page-title">
+      <span>Magazine</span>
+      <h1>半月刊</h1>
+      <p>每半个月重新编辑一次，整理趋势、案例、方法论和可行动建议。这里不是日报合集，而是阶段复盘。</p>
+    </section>
+    <section class="magazine-layout" id="magazineList"></section>
+  </main>
+  <footer class="site-footer">
+    <p>© 2026 Work-Lib · Built for Wenhe</p>
+  </footer>
+  <nav class="bottom-nav" aria-label="移动端导航">
+    <a href="index.html">⌂<span>首页</span></a>
+    <a href="library.html">☷<span>内容</span></a>
+    <a href="magazine.html">▣<span>半月刊</span></a>
+    <a href="favorites.html">★<span>收藏</span></a>
+    <a href="methods.html">◇<span>方法</span></a>
+  </nav>
+  <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+    <div class="search-modal">
+      <div class="modal-top">
+        <h2>搜索 Work-Lib</h2>
+        <button class="icon-button" id="closeSearch" aria-label="关闭搜索">×</button>
+      </div>
+      <input id="globalSearchInput" class="search-input" type="search" placeholder="搜索：家庭日 / EAP / 海报 / AI / 生物医药..." />
+      <div class="quick-tags" id="globalQuickTags"></div>
+      <div class="search-results" id="globalSearchResults"></div>
+    </div>
+  </div>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

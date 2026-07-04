@@ -1,26 +1,28 @@
-# Work-Lib
+# Work-Lib V1.1
 
-个人的工作知识库 V1.0。
+温和的工作知识库 · 蓝色杂志风多页面版本。
 
-这是一个适合部署在 GitHub Pages 上的静态网站，用于长期沉淀：
+## 页面结构
 
-- 每日 Brief
-- 深度推荐
-- 生物医药行业动态
-- 全球热点观察
-- EAP / 员工活动 / 企业文化案例
-- 宣传设计与视觉灵感
-- AI 工具与效率方法
-- 个人项目推进记录
+- `index.html`：首页 / 今日工作台 / 核心沉淀入口
+- `library.html`：内容库 / 搜索 / 标签筛选 / 类型筛选
+- `magazine.html`：半月刊
+- `favorites.html`：值得收藏
+- `methods.html`：方法论
+- `article.html`：文章详情页
+- `data.js`：内容数据
+- `style.css`：样式
+- `script.js`：交互逻辑
 
-## 文件说明
+## 后续更新
 
-- `index.html`：网站首页
-- `style.css`：视觉样式
-- `script.js`：基础交互
-- `README.md`：项目说明
+如果只是更新内容，优先修改 `data.js`。
+如果调整页面结构或视觉，再替换 `index.html`、`style.css`、`script.js` 等文件。
 
+## GitHub Pages 发布
+
+Settings → Pages → Deploy from a branch → main → /(root)
 
 ## 注意
 
-本页面内容，仅供个人学习使用。
+请勿放入公司内部敏感资料、未公开项目、真实员工信息或内部文件截图。
