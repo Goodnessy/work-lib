@@ -4,79 +4,47 @@ const $ = (s, r=document) => r.querySelector(s);
 const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
 const params = new URLSearchParams(location.search);
 const page = document.body.dataset.page;
-function tagHtml(tags=[]){return tags.map(t=>`<span class="tag">${t}</span>`).join('')}
-function miniTags(tags=[]){return `<div class="mini-tags">${tags.slice(0,4).map(t=>`<span>${t}</span>`).join('')}</div>`}
+const NOTE_KEY = 'worklib_annotations_v1';
+const FAV_KEY = 'worklib_favorites_v1';
+let currentDocId = null;
+let pendingSelection = null;
+let editingNoteId = null;
+function escapeHtml(str=''){return String(str).replace(/[&<>'"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[m]))}
+function tagHtml(tags=[]){return tags.map(t=>`<span class="tag">${escapeHtml(t)}</span>`).join('')}
+function miniTags(tags=[]){return `<div class="mini-tags">${tags.slice(0,4).map(t=>`<span>${escapeHtml(t)}</span>`).join('')}</div>`}
 function activeNav(){ $$('[data-nav]').forEach(a=>{ if(a.dataset.nav===page) a.classList.add('active') }) }
 function issueLink(id){return `issue.html?id=${encodeURIComponent(id)}`}
 function groupBy(arr,key){return arr.reduce((m,x)=>{const k=typeof key==='function'?key(x):x[key];(m[k]||(m[k]=[])).push(x);return m},{})}
-function allDocs(){
-  return [
-    ...DB.issues.map(x=>({...x, kind:'每日简报', url:issueLink(x.id)})),
-    ...DB.magazines.map(x=>({...x, kind:'半月刊', date:x.period, url:`issue.html?id=${x.id}`})),
-    ...DB.inspirations.map(x=>({...x, kind:'灵感库', date:x.category, url:`issue.html?id=${x.id}`})),
-    ...DB.methods.map(x=>({...x, kind:'方法论', date:x.category, url:`issue.html?id=${x.id}`})),
-    ...DB.management.map(x=>({...x, kind:'管理视角', url:`issue.html?id=${x.id}`}))
-  ]
-}
+function allDocs(){return [
+  ...(DB.featured||[]).map(x=>({...x, kind:'本周精选', url:issueLink(x.id)})),
+  ...DB.issues.map(x=>({...x, kind:'每日简报', url:issueLink(x.id)})),
+  ...DB.magazines.map(x=>({...x, kind:'半月刊', date:x.period, url:issueLink(x.id)})),
+  ...DB.inspirations.map(x=>({...x, kind:'灵感库', date:x.category, url:issueLink(x.id)})),
+  ...DB.methods.map(x=>({...x, kind:'方法论', date:x.category, url:issueLink(x.id)})),
+  ...DB.management.map(x=>({...x, kind:'管理视角', url:issueLink(x.id)}))
+]}
 function findDoc(id){return allDocs().find(x=>x.id===id)}
-function renderHome(){
-  const issue = DB.issues.find(x=>x.id===DB.meta.homeIssue) || DB.issues[0];
-  $('#homeTitle').textContent = issue.title; $('#homeSummary').textContent = issue.summary; $('#homeTags').innerHTML = tagHtml(issue.tags); $('#homeIssueLink').href = issueLink(issue.id);
-  $('#homeWeek').innerHTML = `${DB.meta.week}<br><small>${DB.meta.weekRange}</small>`;
-  $('#homeStatsCard').innerHTML = Object.entries(DB.meta.weeklyStats).map(([k,v])=>`<div><b>${v}</b><span>${k}</span></div>`).join('');
-  $('#homeNext').textContent = `下次更新：${DB.meta.nextUpdate}`;
-  $('#homeStats').innerHTML = Object.entries(DB.meta.weeklyStats).map(([k,v])=>`<div><b>${v}</b><span>${k}</span></div>`).join('');
-  const tags = [...new Set(allDocs().flatMap(d=>d.tags||[]))].slice(0,16); $('#homeHotTags').innerHTML = tags.map(t=>`<span>${t}</span>`).join('');
-}
-function renderTree(items, getGroup, currentId){
-  const root = $('#treeRoot'); if(!root) return;
-  const groups = groupBy(items, getGroup);
-  root.innerHTML = Object.entries(groups).map(([g,docs])=>`<div class="tree-group"><p class="tree-group-title">${g}</p>${docs.map(d=>`<a class="tree-link ${d.id===currentId?'active':''}" href="${issueLink(d.id)}">${d.date?String(d.date).replace('2026-','').replace('2026年',''):''} ${d.title}</a>`).join('')}</div>`).join('');
-}
-function row(d){return `<a class="doc-row" href="${issueLink(d.id)}"><div class="doc-date">${d.date||d.period||d.category||''}<br>${d.type||d.kind||''}</div><div><h2 class="doc-title">${d.title}</h2><p class="doc-summary">${d.summary||''}</p>${miniTags(d.tags||[])}</div><div class="doc-meta">${d.readTime||'查看'} →</div></a>`}
-function renderList(items, groupFn){
-  renderTree(items, groupFn);
-  $('#contentRoot').innerHTML = `<div class="doc-list">${items.map(row).join('')}</div>`;
-}
-function normalizeItem(item, kind){
-  return {...item, date:item.date||item.period||item.category, type:item.type||kind, kind};
-}
-function renderLibrary(){
-  if(page==='daily') renderList(DB.issues, x=>x.month);
-  if(page==='magazine') renderList(DB.magazines.map(x=>normalizeItem(x,'半月刊')), x=>'半月刊');
-  if(page==='inspiration') renderList(DB.inspirations.map(x=>normalizeItem(x,'灵感库')), x=>x.category);
-  if(page==='methods') renderList(DB.methods.map(x=>normalizeItem(x,'方法论')), x=>x.category);
-  if(page==='management') renderList(DB.management.map(x=>normalizeItem(x,'管理视角')), x=>x.category);
-}
-function renderSection(sec){
-  let html = `<section class="reader-section"><h2>${sec.heading}</h2>`;
-  if(sec.body) html += sec.body.map(p=>`<p>${p}</p>`).join('');
-  if(sec.items) html += sec.items.map(it=>`<div class="insight-item"><h3>${it.title}</h3><p>${it.body}</p>${it.takeaway?`<p class="takeaway"><strong>可转化：</strong>${it.takeaway}</p>`:''}</div>`).join('');
-  html += `</section>`; return html;
-}
-function renderReader(){
-  const id = params.get('id') || DB.meta.homeIssue; const doc = findDoc(id);
-  renderTree(allDocs(), x=>x.kind || x.type || '文档', id);
-  if(!doc){ $('#readerRoot').innerHTML='<p class="empty">没有找到这条内容。</p>'; return; }
-  let sections = doc.sections || [];
-  let sourceHtml = '';
-  if(doc.sources && doc.sources.length) sourceHtml = `<div class="source-list"><strong>资料来源 / 参考线索：</strong>${doc.sources.map(s=>`<p>${s}</p>`).join('')}</div>`;
-  if(doc.steps){sections=[{heading:'方法步骤', body:doc.steps}]}
-  if(doc.content){sections=[{heading:'内容说明', body:doc.content}]}
-  $('#readerRoot').innerHTML = `<div class="reader-top"><span class="reader-type">${doc.kind||doc.type||doc.category||'文档'} · ${doc.date||doc.period||''}</span><h1>${doc.title}</h1><p class="reader-summary">${doc.summary||''}</p><div class="tag-row">${tagHtml(doc.tags||[])}</div>${doc.mainLine?`<p class="takeaway"><strong>今日主线：</strong>${doc.mainLine}</p>`:''}</div>${sections.map(renderSection).join('')}${sourceHtml}`;
-}
-function renderSearch(){
-  const input=$('#searchInput'), root=$('#searchResults');
-  const docs=allDocs();
-  function go(q=''){
-    q=q.trim().toLowerCase();
-    const filtered = q?docs.filter(d=>JSON.stringify(d).toLowerCase().includes(q)):docs.slice(0,12);
-    root.innerHTML = filtered.length?`<div class="doc-list">${filtered.map(row).join('')}</div>`:`<p class="empty">没有找到相关内容。</p>`;
-  }
-  input.addEventListener('input',()=>go(input.value)); go('');
-}
-activeNav();
-if(page==='home') renderHome();
-if(['daily','magazine','inspiration','methods','management'].includes(page)) renderLibrary();
-if(page==='issue') renderReader();
-if(page==='search') renderSearch();
+function getNotes(){try{return JSON.parse(localStorage.getItem(NOTE_KEY)||'[]')}catch(e){return []}}
+function setNotes(notes){localStorage.setItem(NOTE_KEY, JSON.stringify(notes))}
+function getFavs(){try{return JSON.parse(localStorage.getItem(FAV_KEY)||'[]')}catch(e){return []}}
+function setFavs(favs){localStorage.setItem(FAV_KEY, JSON.stringify(favs))}
+function renderHome(){const issue=(DB.featured||[]).find(x=>x.id===DB.meta.homeFeature)||(DB.featured||[])[0]||DB.issues[0];$('#homeTitle').textContent=issue.title;$('#homeSummary').textContent=issue.summary;$('#homeTags').innerHTML=tagHtml(issue.tags);$('#homeIssueLink').href=issueLink(issue.id);$('#homeWeek').innerHTML=`${DB.meta.week}<br><small>${DB.meta.weekRange}</small>`;$('#homeStatsCard').innerHTML=Object.entries(DB.meta.weeklyStats).map(([k,v])=>`<div><b>${escapeHtml(v)}</b><span>${escapeHtml(k)}</span></div>`).join('');$('#homeNext').textContent=`下次更新：${DB.meta.nextUpdate}`;$('#homeStats').innerHTML=Object.entries(DB.meta.weeklyStats).map(([k,v])=>`<div><b>${escapeHtml(v)}</b><span>${escapeHtml(k)}</span></div>`).join('');const tags=[...new Set(allDocs().flatMap(d=>d.tags||[]))].slice(0,18);$('#homeHotTags').innerHTML=tags.map(t=>`<span>${escapeHtml(t)}</span>`).join('')}
+function renderTree(items,getGroup,currentId){const root=$('#treeRoot');if(!root)return;const groups=groupBy(items,getGroup);root.innerHTML=Object.entries(groups).map(([g,docs])=>`<div class="tree-group"><p class="tree-group-title">${escapeHtml(g)}</p>${docs.map(d=>`<a class="tree-link ${d.id===currentId?'active':''}" href="${issueLink(d.id)}"><span class="tree-date">${escapeHtml(d.date?String(d.date).replace('2026-','').replace('2026年',''):'')}</span>${escapeHtml(d.title)}</a>`).join('')}</div>`).join('')}
+function row(d){return `<a class="doc-row" href="${issueLink(d.id)}"><div class="doc-date">${escapeHtml(d.date||d.period||d.category||'')}<br>${escapeHtml(d.type||d.kind||'')}</div><div><h2 class="doc-title">${escapeHtml(d.title)}</h2><p class="doc-summary">${escapeHtml(d.summary||'')}</p>${miniTags(d.tags||[])}</div><div class="doc-meta">${escapeHtml(d.readTime||'查看')} →</div></a>`}
+function renderList(items,groupFn){renderTree(items,groupFn);$('#contentRoot').innerHTML=`<div class="doc-list">${items.map(row).join('')}</div>`}
+function normalizeItem(item,kind){return {...item,date:item.date||item.period||item.category,type:item.type||kind,kind}}
+function renderManagement(){const items=DB.management.map(x=>normalizeItem(x,'管理视角'));renderTree(items,x=>x.category);const timeline=items.filter(x=>x.category==='动态').sort((a,b)=>String(b.timelineDate||b.date).localeCompare(String(a.timelineDate||a.date)));const timelineHtml=`<div class="timeline-card"><h2>动态时间轴</h2><p>只收公开可核验信息；没有新增就明确标注，不用旧内容凑数。</p><div class="timeline">${timeline.map(x=>`<a href="${issueLink(x.id)}"><b>${escapeHtml(x.timelineDate||x.date)}</b><span>${escapeHtml(x.event||x.title)}</span></a>`).join('')}</div></div>`;const groups=['资料','动态','发言'];const groupHtml=groups.map(g=>{const docs=items.filter(x=>x.category===g);return `<section class="mgmt-block"><h2>${g}</h2><div class="doc-list">${docs.map(row).join('')}</div></section>`}).join('');$('#contentRoot').innerHTML=timelineHtml+groupHtml}
+function renderLibrary(){if(page==='daily')renderList(DB.issues,x=>x.month);if(page==='magazine')renderList(DB.magazines.map(x=>normalizeItem(x,'半月刊')),x=>'半月刊');if(page==='inspiration')renderList(DB.inspirations.map(x=>normalizeItem(x,'灵感库')),x=>x.category);if(page==='methods')renderList(DB.methods.map(x=>normalizeItem(x,'方法论')),x=>x.category);if(page==='management')renderManagement()}
+function renderSection(sec){let html=`<section class="reader-section"><h2>${escapeHtml(sec.heading)}</h2>`;if(sec.body)html+=sec.body.map(p=>`<p>${escapeHtml(p)}</p>`).join('');if(sec.items)html+=sec.items.map(it=>`<div class="insight-item"><h3>${escapeHtml(it.title)}</h3><p>${escapeHtml(it.body)}</p>${it.takeaway?`<p class="takeaway"><strong>可转化 / 提醒：</strong>${escapeHtml(it.takeaway)}</p>`:''}</div>`).join('');html+=`</section>`;return html}
+function renderReader(){const id=params.get('id')||DB.meta.homeFeature;currentDocId=id;const doc=findDoc(id);renderTree(allDocs(),x=>x.kind||x.type||'文档',id);if(!doc){$('#readerRoot').innerHTML='<p class="empty">没有找到这条内容。</p>';return}let sections=doc.sections||[];if(doc.steps&&!sections.length){sections=[{heading:'方法步骤',body:doc.steps}]}if(doc.content&&!sections.length){sections=[{heading:'内容说明',body:doc.content}]}let sourceHtml='';if(doc.sources&&doc.sources.length)sourceHtml=`<div class="source-list"><strong>资料来源 / 参考线索：</strong>${doc.sources.map(s=>`<p>${escapeHtml(s)}</p>`).join('')}</div>`;$('#readerRoot').innerHTML=`<div class="reader-top"><span class="reader-type">${escapeHtml(doc.kind||doc.type||doc.category||'文档')} · ${escapeHtml(doc.date||doc.period||'')}</span><h1>${escapeHtml(doc.title)}</h1><p class="reader-summary">${escapeHtml(doc.summary||'')}</p><div class="tag-row">${tagHtml(doc.tags||[])}</div>${doc.mainLine?`<p class="takeaway"><strong>主线：</strong>${escapeHtml(doc.mainLine)}</p>`:''}</div>${sections.map(renderSection).join('')}${sourceHtml}`;setupFavorite();setTimeout(applyAnnotations,0)}
+function renderSearch(){const input=$('#searchInput'),root=$('#searchResults');const docs=allDocs();function go(q=''){q=q.trim().toLowerCase();const filtered=q?docs.filter(d=>JSON.stringify(d).toLowerCase().includes(q)):docs.slice(0,16);root.innerHTML=filtered.length?`<div class="doc-list">${filtered.map(row).join('')}</div>`:`<p class="empty">没有找到相关内容。</p>`}input.addEventListener('input',()=>go(input.value));go('')}
+function setupFavorite(){const btn=$('#favBtn');if(!btn)return;const update=()=>{const favs=getFavs();btn.textContent=favs.includes(currentDocId)?'★ 已收藏':'☆ 收藏'};btn.onclick=()=>{let favs=getFavs();favs=favs.includes(currentDocId)?favs.filter(x=>x!==currentDocId):[...favs,currentDocId];setFavs(favs);update()};update()}
+function setupAnnotationEvents(){const reader=$('#readerRoot'), toolbar=$('#noteToolbar');if(!reader||!toolbar)return;document.addEventListener('selectionchange',()=>{if(page!=='issue')return;const sel=window.getSelection();if(!sel||sel.isCollapsed){toolbar.classList.add('hidden');return}const text=sel.toString().trim();if(!text||text.length<2||!reader.contains(sel.anchorNode)||!reader.contains(sel.focusNode)){toolbar.classList.add('hidden');return}const range=sel.getRangeAt(0);const rect=range.getBoundingClientRect();pendingSelection={text, docId:currentDocId};toolbar.style.left=Math.max(12,rect.left+window.scrollX)+'px';toolbar.style.top=Math.max(12,rect.top+window.scrollY-48)+'px';toolbar.classList.remove('hidden')});$('#makeNoteBtn')?.addEventListener('click',()=>{if(!pendingSelection)return;editingNoteId=null;openNoteModal({quote:pendingSelection.text,note:''})});reader.addEventListener('click',e=>{const mark=e.target.closest('.annotation-mark');if(!mark)return;const note=getNotes().find(n=>n.id===mark.dataset.noteId);if(note){editingNoteId=note.id;openNoteModal(note)}});$('#cancelNoteBtn')?.addEventListener('click',closeNoteModal);$('#saveNoteBtn')?.addEventListener('click',saveCurrentNote);$('#deleteNoteBtn')?.addEventListener('click',deleteCurrentNote);$('#exportNotesBtn')?.addEventListener('click',exportNotes)}
+function openNoteModal(note){$('#noteModalTitle').textContent=editingNoteId?'编辑批注':'批注';$('#noteQuote').textContent=note.quote||'';$('#noteText').value=note.note||'';$('#deleteNoteBtn').classList.toggle('hidden',!editingNoteId);$('#noteModal').classList.remove('hidden');$('#noteToolbar').classList.add('hidden');setTimeout(()=>$('#noteText').focus(),50)}
+function closeNoteModal(){$('#noteModal').classList.add('hidden');pendingSelection=null;editingNoteId=null;window.getSelection()?.removeAllRanges()}
+function saveCurrentNote(){const quote=$('#noteQuote').textContent.trim();const note=$('#noteText').value.trim();if(!quote||!note){alert('请先写下批注内容。');return}let notes=getNotes();if(editingNoteId){notes=notes.map(n=>n.id===editingNoteId?{...n,note,updatedAt:new Date().toISOString()}:n)}else{notes.push({id:'note-'+Date.now()+'-'+Math.random().toString(16).slice(2),docId:currentDocId,quote,note,createdAt:new Date().toISOString()})}setNotes(notes);closeNoteModal();renderReader()}
+function deleteCurrentNote(){if(!editingNoteId)return;if(!confirm('删除这条批注吗？'))return;setNotes(getNotes().filter(n=>n.id!==editingNoteId));closeNoteModal();renderReader()}
+function exportNotes(){const notes=getNotes();const payload=notes.map(n=>{const doc=findDoc(n.docId)||{};return {...n,docTitle:doc.title||n.docId,docType:doc.kind||doc.type||doc.category||'',docDate:doc.date||doc.period||''}});const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='work-lib-批注备份.json';a.click();URL.revokeObjectURL(a.href)}
+function applyAnnotations(){const reader=$('#readerRoot');if(!reader)return;const notes=getNotes().filter(n=>n.docId===currentDocId).sort((a,b)=>b.quote.length-a.quote.length);notes.forEach(note=>highlightQuote(reader,note))}
+function highlightQuote(root,note){const quote=note.quote;if(!quote)return;const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode(node){if(!node.nodeValue.includes(quote))return NodeFilter.FILTER_REJECT;if(node.parentElement.closest('.annotation-mark'))return NodeFilter.FILTER_REJECT;return NodeFilter.FILTER_ACCEPT}});const node=walker.nextNode();if(!node)return;const text=node.nodeValue;const idx=text.indexOf(quote);if(idx<0)return;const frag=document.createDocumentFragment();frag.append(document.createTextNode(text.slice(0,idx)));const mark=document.createElement('mark');mark.className='annotation-mark';mark.dataset.noteId=note.id;mark.title=note.note;mark.textContent=quote;frag.append(mark);frag.append(document.createTextNode(text.slice(idx+quote.length)));node.parentNode.replaceChild(frag,node)}
+activeNav();if(page==='home')renderHome();if(['daily','magazine','inspiration','methods','management'].includes(page))renderLibrary();if(page==='issue'){renderReader();setupAnnotationEvents()}if(page==='search')renderSearch();
