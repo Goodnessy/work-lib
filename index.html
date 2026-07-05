@@ -1,84 +1,58 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head><meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Work-Lib｜温和的工作知识库</title>
-<meta name="description" content="Work-Lib：每日简报、半月刊、灵感库、方法论。" />
-<link rel="stylesheet" href="style.css" /></head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work-Lib｜温和的工作知识库</title>
+  <meta name="description" content="Work-Lib：每日简报、半月刊、灵感库、方法论、管理视角。" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body data-page="home">
 <header class="site-header">
-  <a class="brand" href="index.html">
-    <span class="brand-icon">W</span>
-    <span><strong>Work-Lib</strong><em>温和的工作知识库</em></span>
-  </a>
+  <a class="brand" href="index.html"><span class="brand-icon">W</span><span><strong>Work-Lib</strong><em>温和的工作知识库</em></span></a>
   <nav class="top-nav">
     <a href="index.html" data-nav="home">首页</a>
     <a href="daily.html" data-nav="daily">每日简报</a>
     <a href="magazine.html" data-nav="magazine">半月刊</a>
-    <a href="inspiration.html" data-nav="collection">灵感库</a>
+    <a href="inspiration.html" data-nav="inspiration">灵感库</a>
     <a href="methods.html" data-nav="methods">方法论</a>
+    <a href="management.html" data-nav="management">管理视角</a>
   </nav>
   <a class="search-link" href="search.html">搜索</a>
 </header>
+
 <main class="home">
   <section class="hero">
     <div class="hero-copy">
-      <p class="kicker">今日主读</p>
-      <h1 id="homeTitle">把员工活动宣传升级为一条可持续的沟通链路</h1>
-      <p class="lead" id="homeSummary">从“发一条消息”到“形成一次连接”，让每一次活动被看见、被理解、被记住，最终沉淀为组织文化的正向循环。</p>
+      <p class="kicker">本周主读</p>
+      <h1 id="homeTitle"></h1>
+      <p class="lead" id="homeSummary"></p>
       <div class="tag-row" id="homeTags"></div>
-      <a class="primary" id="homeIssueLink" href="issue.html?id=daily-2026-07-04">阅读今日简报</a>
+      <a class="primary" id="homeIssueLink" href="#">阅读本周主读</a>
     </div>
-    <aside class="today-card">
-      <div class="date-line" id="homeDate">07 / 04</div>
-      <p class="small-label">今日行动</p>
-      <p id="homeAction">用 10 分钟，为最近一个活动增加“一句话活动回声”收集机制。</p>
-      <a id="homeActionLink" href="issue.html?id=daily-2026-07-04">查看详情 →</a>
+    <aside class="today-card weekly-card">
+      <div class="date-line" id="homeWeek"></div>
+      <p class="small-label">本周入库</p>
+      <div class="weekly-stats" id="homeStatsCard"></div>
+      <p class="next-update" id="homeNext"></p>
     </aside>
   </section>
-
   <section class="core">
-    <div class="section-title">
-      <p>CORE ARCHIVE</p>
-      <h2>核心沉淀</h2>
-      <span>精选内容沉淀为可复用的工作资产</span>
-    </div>
-    <div class="core-grid">
-      <a class="core-card" href="magazine.html">
-        <div class="icon">◇</div>
-        <h3>半月刊</h3>
-        <p>每半个月重新编辑一次，整理趋势、案例、洞察与方法。</p>
-        <span>进入半月刊 →</span>
-      </a>
-      <a class="core-card" href="inspiration.html">
-        <div class="icon">☆</div>
-        <h3>灵感库</h3>
-        <p>经过筛选后留下的案例、选题、视觉、工具与创意线索，适合反复查阅、持续启发。</p>
-        <span>进入灵感库 →</span>
-      </a>
-      <a class="core-card" href="methods.html">
-        <div class="icon">#</div>
-        <h3>方法论</h3>
-        <p>可复用的工作模型、行动清单与表达框架，帮助你把灵感变成行动。</p>
-        <span>进入方法论 →</span>
-      </a>
+    <div class="section-title"><p>CORE ARCHIVE</p><h2>核心沉淀</h2><span>首页保持杂志感，内页回到文档库和文件树</span></div>
+    <div class="core-grid five">
+      <a class="core-card" href="daily.html"><div class="icon">▦</div><h3>每日简报</h3><p>工作日简报 + 周末深读，按日期归档。</p><span>进入简报 →</span></a>
+      <a class="core-card" href="magazine.html"><div class="icon">◇</div><h3>半月刊</h3><p>每半个月重新编辑一次，沉淀趋势、案例与方法。</p><span>进入半月刊 →</span></a>
+      <a class="core-card" href="inspiration.html"><div class="icon">☆</div><h3>灵感库</h3><p>公司内部活动、公众号选题、医药传播与视觉创意。</p><span>进入灵感库 →</span></a>
+      <a class="core-card" href="methods.html"><div class="icon">#</div><h3>方法论</h3><p>可复用的工作模型、清单、模板和训练方法。</p><span>进入方法论 →</span></a>
+      <a class="core-card" href="management.html"><div class="icon">◎</div><h3>管理视角</h3><p>公开动态、战略关键词、管理表达和可学习金句。</p><span>进入管理视角 →</span></a>
     </div>
   </section>
-
-  <section class="data-strip">
-    <div class="stat-list" id="homeStats"></div>
-    <div class="tag-cloud" id="homeHotTags"></div>
-  </section>
+  <section class="data-strip"><div class="stat-list" id="homeStats"></div><div class="tag-cloud" id="homeHotTags"></div></section>
 </main>
-<footer class="site-footer">
-  <p>© 2026 Work-Lib · 持续沉淀，长期复用</p>
-</footer>
+
+<footer class="site-footer"><p>© 2026 Work-Lib · 持续沉淀，长期复用</p></footer>
 <nav class="bottom-nav">
-  <a href="index.html">首页</a>
-  <a href="daily.html">简报</a>
-  <a href="magazine.html">半月刊</a>
-  <a href="inspiration.html">灵感库</a>
-  <a href="methods.html">方法论</a>
+  <a href="index.html">首页</a><a href="daily.html">简报</a><a href="inspiration.html">灵感</a><a href="methods.html">方法</a><a href="management.html">管理</a>
 </nav>
 <script src="data.js"></script>
 <script src="script.js"></script>

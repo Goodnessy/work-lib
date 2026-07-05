@@ -1,42 +1,34 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head><meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Work-Lib｜温和的工作知识库</title>
-<meta name="description" content="Work-Lib：每日简报、半月刊、灵感库、方法论。" />
-<link rel="stylesheet" href="style.css" /></head>
-<body data-page="collection">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>灵感库｜Work-Lib</title>
+  <meta name="description" content="Work-Lib：每日简报、半月刊、灵感库、方法论、管理视角。" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="inspiration">
 <header class="site-header">
-  <a class="brand" href="index.html">
-    <span class="brand-icon">W</span>
-    <span><strong>Work-Lib</strong><em>温和的工作知识库</em></span>
-  </a>
+  <a class="brand" href="index.html"><span class="brand-icon">W</span><span><strong>Work-Lib</strong><em>温和的工作知识库</em></span></a>
   <nav class="top-nav">
     <a href="index.html" data-nav="home">首页</a>
     <a href="daily.html" data-nav="daily">每日简报</a>
     <a href="magazine.html" data-nav="magazine">半月刊</a>
-    <a href="inspiration.html" data-nav="collection">灵感库</a>
+    <a href="inspiration.html" data-nav="inspiration">灵感库</a>
     <a href="methods.html" data-nav="methods">方法论</a>
+    <a href="management.html" data-nav="management">管理视角</a>
   </nav>
   <a class="search-link" href="search.html">搜索</a>
 </header>
-<main class="page">
-  <section class="page-hero">
-    <p class="kicker">ARCHIVE</p>
-    <h1>灵感库</h1>
-    <p>这里收录经过筛选后值得反复查看的案例、选题、设计、工具与工作灵感。</p>
-  </section>
-  <section class="card-grid" id="collectionList"></section>
+
+<main class="library-shell">
+  <aside class="library-tree"><div class="tree-title"><strong>灵感库</strong><span>公司内部活动、公众号选题、医药传播与视觉创意</span></div><div id="treeRoot"></div></aside>
+  <section class="library-main"><div class="library-head"><p class="kicker">DOCUMENT LIBRARY</p><h1>灵感库</h1><p>公司内部活动、公众号选题、医药传播与视觉创意</p></div><div id="contentRoot"></div></section>
 </main>
-<footer class="site-footer">
-  <p>© 2026 Work-Lib · 持续沉淀，长期复用</p>
-</footer>
+
+<footer class="site-footer"><p>© 2026 Work-Lib · 持续沉淀，长期复用</p></footer>
 <nav class="bottom-nav">
-  <a href="index.html">首页</a>
-  <a href="daily.html">简报</a>
-  <a href="magazine.html">半月刊</a>
-  <a href="inspiration.html">灵感库</a>
-  <a href="methods.html">方法论</a>
+  <a href="index.html">首页</a><a href="daily.html">简报</a><a href="inspiration.html">灵感</a><a href="methods.html">方法</a><a href="management.html">管理</a>
 </nav>
 <script src="data.js"></script>
 <script src="script.js"></script>
