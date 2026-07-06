@@ -1,10 +1,10 @@
 window.WORK_LIB = {
   "meta": {
-    "version": "V1.5.2 深度阅读返工版",
-    "updated": "2026-07-05",
+    "version": "V1.5.3 周更包｜阅读体验修正版",
+    "updated": "2026-07-06",
     "title": "Work-Lib",
     "subtitle": "温和的工作知识库",
-    "description": "面向明天出差路上阅读的深度版：围绕 120 个家庭的家庭日/开放日、HR 智能机器人、批注与问 AI 进行内容返工。",
+    "description": "周一周更包：加入 2026-07-06 Brief，并修正标签聚合、文档索引套娃、目录折叠、最近更新优先与问 AI 轻量解释模板。",
     "week": "2026 第 27 周",
     "weekRange": "07.05 — 07.12",
     "nextUpdate": "07 / 13 周一",
