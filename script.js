@@ -29,7 +29,7 @@
     $('#homeIssueLink').href = articleUrl(featured);
     $('#homeWeek').textContent = `更新至 ${fmtDate(meta.updated)}`;
     $('#homeStatsCard').innerHTML = `<div class="mini-list">${sortByDate(articles).slice(0,3).map(a=>`<a class="mini-item" href="${articleUrl(a)}"><b>${a.title}</b><span>${categories[a.category]} · ${fmtDate(a.date)}</span></a>`).join('')}</div>`;
-    const counts = Object.keys(categories).map(k=>[categories[k],articles.filter(a=>a.category===k).length]);
+    const counts = Object.keys(categories).map(k=>[categories[k], k==='management' ? management.dynamics.length : articles.filter(a=>a.category===k).length]);
     $('#homeStats').innerHTML = counts.map(([k,v])=>`<div class="stat"><span>${k}</span><strong>${v}</strong></div>`).join('');
     $('#homeHotTags').innerHTML = tags.map(t=>`<a class="tag" href="${tagUrl(t)}">${t}</a>`).join('');
   }
@@ -64,8 +64,6 @@
     input.value = qs.get('q')||'';
   }
   function initManagement(){
-    const rows = management.profile.rows.map(([k,v])=>`<div>${k}</div><div>${v}</div>`).join('');
-    $('#mgmtProfile').innerHTML = `<h2>${management.profile.title}</h2><div class="info-grid">${rows}</div>`;
     $('#mgmtDynamics').innerHTML = `<h2>动态｜2026 年公开动态</h2><div class="timeline">${management.dynamics.map(d=>`<div class="timeline-item"><h3>${d.date}｜${d.title}</h3><p>${d.content}</p><p><strong>管理表达：</strong>${d.expression}</p><p><strong>内部传播转化：</strong>${d.internal}</p><p class="source">来源：<a href="${d.url}" target="_blank" rel="noopener noreferrer">${d.source}</a></p></div>`).join('')}</div>`;
     $('#mgmtSpeech').innerHTML = `<h2>${management.speech.title}</h2><div class="quote-note">${management.speech.status}</div><ul>${management.speech.points.map(p=>`<li>${p}</li>`).join('')}</ul>`;
   }
