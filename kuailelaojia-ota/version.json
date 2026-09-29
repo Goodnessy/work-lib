@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "published": false,
+  "versionName": "1.0.0.3",
+  "versionCode": 1003,
+  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.3/KuaiLeLaoJia.apk",
+  "sha256": "",
+  "forceUpdate": false,
+  "releaseNotes": [
+    "首页原生重建与视觉升级",
+    "加入应用内更新能力"
+  ],
+  "apkSizeBytes": 0
+}
