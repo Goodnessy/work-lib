@@ -1,16 +1,16 @@
 {
     "enabled":  true,
     "published":  true,
-    "versionName":  "1.0.0.5",
-    "versionCode":  1005,
-    "apkUrl":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.5/KuaiLeLaoJia.apk",
-    "sha256":  "2a6e2f71ab7e8c442919e6d9eae3d639a5b1e10fac3a01bd5d0cccc96f4158bd",
+    "versionName":  "1.0.0.6",
+    "versionCode":  1006,
+    "apkUrl":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.6/KuaiLeLaoJia.apk",
+    "sha256":  "e35bf09d5242454c6e9fe08427a820536351602d6f6aa8573ebe309fa5739ded",
     "forceUpdate":  false,
     "releaseNotes":  [
-                         "首页顶部安全区修正",
-                         "首页比例与 Dock 精修",
-                         "本周心情轻量浮层",
-                         "软件更新入口乱码修复"
+                         "首页视觉按效果图重做",
+                         "高清 Hero 与老甲压层",
+                         "打卡圆点阴影与渐变",
+                         "本周心情与快乐重启精修"
                      ],
-    "apkSizeBytes":  56996457
+    "apkSizeBytes":  57092551
 }
