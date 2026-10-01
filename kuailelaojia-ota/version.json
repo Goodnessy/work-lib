@@ -1,17 +1,13 @@
 {
-    "enabled":  true,
-    "published":  true,
-    "versionName":  "1.0.0.8",
-    "versionCode":  1008,
-    "apkUrl":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.8/KuaiLeLaoJia.apk",
-    "sha256":  "0d2ab98f98087b5bb4ba47c092761b4d6a05d6893a29b9f2f4a36870c518c255",
-    "forceUpdate":  false,
-    "releaseNotes":  [
-                         "Home visual polish based on approved design",
-                         "Hero and mascot cross-layer composition restored",
-                         "Restart day count remains dynamic",
-                         "Mood trail redesigned for seven days",
-                         "Bottom dock reduced in height"
-                     ],
-    "apkSizeBytes":  57188501
+  "enabled": false,
+  "published": false,
+  "versionName": "1.0.0.8",
+  "versionCode": 1008,
+  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.8/KuaiLeLaoJia.apk",
+  "sha256": "0d2ab98f98087b5bb4ba47c092761b4d6a05d6893a29b9f2f4a36870c518c255",
+  "forceUpdate": false,
+  "releaseNotes": [
+    "V1.0.0.8 OTA temporarily disabled for startup crash triage"
+  ],
+  "apkSizeBytes": 57188501
 }
