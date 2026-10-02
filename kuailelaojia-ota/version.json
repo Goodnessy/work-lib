@@ -1,16 +1,18 @@
 {
     "enabled":  true,
     "published":  true,
-    "versionName":  "1.0.0.10",
-    "versionCode":  1010,
-    "apkUrl":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.10/KuaiLeLaoJia.apk",
-    "sha256":  "b8fb79cb2147310a309dab49263daf7dd64c398dec85aea98e78c417ced87468",
+    "versionName":  "1.0.0.11",
+    "versionCode":  1011,
+    "apkUrl":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.11/KuaiLeLaoJia.apk",
+    "sha256":  "3745e5f949a4eb16aeada843dde4c3f89a1e0ba4037ea6059798fb07c0eef427",
     "forceUpdate":  false,
     "releaseNotes":  [
-                         "Stable visual baseline retained",
-                         "Manual update entry restored",
-                         "Automatic OTA check restored",
-                         "Future versions can update through OTA"
+                         "Home layout rebuilt with standard Compose components",
+                         "Monday-Sunday medication status moved to the top",
+                         "Mascot becomes the main visual element",
+                         "Medication and restart are separate action cards",
+                         "TSH and TG latest values added to the home page",
+                         "Bottom dock no longer covers page content"
                      ],
-    "apkSizeBytes":  57189081
+    "apkSizeBytes":  57221849
 }
