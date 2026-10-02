@@ -1,15 +1,15 @@
 {
   "enabled": true,
   "published": true,
-  "versionName": "1.0.0.13",
-  "versionCode": 1013,
-  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.13/KuaiLeLaoJia.apk",
-  "sha256": "9387328b65b081df60fd3e4de45dd24624e5ef2ed3d69edd03b10c3dbb110fa4",
+  "versionName": "1.0.0.14",
+  "versionCode": 1014,
+  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.14/KuaiLeLaoJia.apk",
+  "sha256": "83d7dfa66e9b62c2ed9f094bb9116104adfcc408b3561a6698e75b2dc64928fd",
   "forceUpdate": false,
   "releaseNotes": [
-    "首页最终打磨",
-    "老甲应用图标更新",
-    "桌面一键服药小组件"
+    "首页顶部留白与整体精细度调整",
+    "Hero 使用确认横版图片资产",
+    "应用图标与桌面小组件按效果图修正"
   ],
-  "apkSizeBytes": 57267634
+  "apkSizeBytes": 57277335
 }
