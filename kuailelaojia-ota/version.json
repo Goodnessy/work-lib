@@ -1,18 +1,17 @@
 {
-    "enabled":  true,
-    "published":  true,
-    "versionName":  "1.0.0.11",
-    "versionCode":  1011,
-    "apkUrl":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.11/KuaiLeLaoJia.apk",
-    "sha256":  "a868145d9da9d7a76a1c94a76bcc87636992d07ceb9cc551936d86922ba75a48",
-    "forceUpdate":  false,
-    "releaseNotes":  [
-                         "Home layout rebuilt with standard Compose components",
-                         "Monday-Sunday medication status moved to the top",
-                         "Mascot becomes the main visual element",
-                         "Medication and restart are separate action cards",
-                         "TSH and TG latest values added to the home page",
-                         "Bottom dock no longer covers page content"
-                     ],
-    "apkSizeBytes":  57233663
+  "enabled": true,
+  "published": true,
+  "versionName": "1.0.0.12",
+  "versionCode": 1012,
+  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.12/KuaiLeLaoJia.apk",
+  "sha256": "a868145d9da9d7a76a1c94a76bcc87636992d07ceb9cc551936d86922ba75a48",
+  "forceUpdate": false,
+  "releaseNotes": [
+    "首页品牌标题与视觉层级更新",
+    "今日用药改为日期 + 药量，并使用「记一下 / 已完成」状态",
+    "快乐重启角色放大并贴底",
+    "TSH / TG 保持纯展示",
+    "底部 Dock 不再遮挡业务内容"
+  ],
+  "apkSizeBytes": 57233663
 }
