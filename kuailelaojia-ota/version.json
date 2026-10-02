@@ -4,7 +4,7 @@
     "versionName":  "1.0.0.11",
     "versionCode":  1011,
     "apkUrl":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.11/KuaiLeLaoJia.apk",
-    "sha256":  "3745e5f949a4eb16aeada843dde4c3f89a1e0ba4037ea6059798fb07c0eef427",
+    "sha256":  "a868145d9da9d7a76a1c94a76bcc87636992d07ceb9cc551936d86922ba75a48",
     "forceUpdate":  false,
     "releaseNotes":  [
                          "Home layout rebuilt with standard Compose components",
@@ -14,5 +14,5 @@
                          "TSH and TG latest values added to the home page",
                          "Bottom dock no longer covers page content"
                      ],
-    "apkSizeBytes":  57221849
+    "apkSizeBytes":  57233663
 }
