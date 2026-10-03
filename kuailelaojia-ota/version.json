@@ -1,18 +1,15 @@
 {
-    "enabled":  true,
-    "published":  true,
-    "versionName":  "1.0.0.17",
-    "versionCode":  1017,
-    "apkUrl":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.17/KuaiLeLaoJia.apk",
-    "sha256":  "05f150b78d46766598680f2778af3d47ecdf9a760fd9f4957d7943b9ff73044c",
-    "forceUpdate":  false,
-    "releaseNotes":  {
-                         "value":  [
-                                       "修复启动图片损坏与桌面组件加载问题",
-                                       "甲功记录精简为五项，保留历史数据与本机附件",
-                                       "我的改为五个入口，更新显示下载大小与真实进度"
-                                   ],
-                         "Count":  3
-                     },
-    "apkSizeBytes":  12346661
+  "enabled": true,
+  "published": true,
+  "versionName": "1.0.0.17",
+  "versionCode": 1017,
+  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.17/KuaiLeLaoJia.apk",
+  "sha256": "05f150b78d46766598680f2778af3d47ecdf9a760fd9f4957d7943b9ff73044c",
+  "forceUpdate": false,
+  "releaseNotes": [
+    "修复启动图片损坏与桌面组件加载问题",
+    "甲功记录精简为五项，保留历史数据与本机附件",
+    "我的改为五个入口，更新显示下载大小与真实进度"
+  ],
+  "apkSizeBytes": 12346661
 }
