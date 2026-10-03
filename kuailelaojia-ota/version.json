@@ -1,15 +1,15 @@
 {
-  "enabled": true,
-  "published": true,
-  "versionName": "1.0.0.18",
-  "versionCode": 1018,
-  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.18/KuaiLeLaoJia.apk",
-  "sha256": "96e2ef5ff031ca92045f7e1580d2ca2561c2ee6acbe87b1c01a35ad920f53ba9",
-  "forceUpdate": false,
-  "releaseNotes": [
-    "统一首页、记录和我的视觉样式，优化字号与布局",
-    "七天药量独立填写，记录详情直接查看报告，接入真实作者二维码",
-    "调整桌面组件布局，保留历史数据和下载进度"
-  ],
-  "apkSizeBytes": 12664396
+    "enabled":  true,
+    "published":  true,
+    "versionName":  "1.0.0.19",
+    "versionCode":  1019,
+    "apkUrl":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.19/KuaiLeLaoJia.apk",
+    "sha256":  "84e7c6d359e1413e6590eb6d07ea567b186fa1a858aa664706637b84f5f110bf",
+    "forceUpdate":  false,
+    "releaseNotes":  [
+                         "报告支持本地离线识别，核对并修改后保存",
+                         "指标按报告实际项目展示，新增年度筛选及按单位查看趋势",
+                         "优化记录编辑、Widget日期按钮与三页标题，保留历史数据"
+                     ],
+    "apkSizeBytes":  115074345
 }
