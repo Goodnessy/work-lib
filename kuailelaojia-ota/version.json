@@ -1,15 +1,15 @@
 {
     "enabled":  true,
     "published":  true,
-    "versionName":  "1.0.0.15",
-    "versionCode":  1015,
-    "apkUrl":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.15/KuaiLeLaoJia.apk",
-    "sha256":  "5ae55d7a5cc4e6d01c3389b2d62bb21a63b946fd85553ff28bc60e090c349be0",
+    "versionName":  "1.0.0.16",
+    "versionCode":  1016,
+    "apkUrl":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.16/KuaiLeLaoJia.apk",
+    "sha256":  "f744fd74faaaf913825281f67ad6d23cdbb641f4e5fd19655dc958bf7ed4bddb",
     "forceUpdate":  false,
     "releaseNotes":  [
-                         "Restore confirmed homepage structure and source wiring",
-                         "Restore manual software update entry",
-                         "Refine widget hierarchy and compact action button"
+                         "Text-led Hero with increased height",
+                         "Refined medication card alignment and typography",
+                         "Redesigned medication widget with date and dose priority"
                      ],
-    "apkSizeBytes":  57287137
+    "apkSizeBytes":  57290565
 }
