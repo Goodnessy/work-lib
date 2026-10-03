@@ -1,15 +1,15 @@
 {
-  "enabled": true,
-  "published": true,
-  "versionName": "1.0.0.14",
-  "versionCode": 1014,
-  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.14/KuaiLeLaoJia.apk",
-  "sha256": "83d7dfa66e9b62c2ed9f094bb9116104adfcc408b3561a6698e75b2dc64928fd",
-  "forceUpdate": false,
-  "releaseNotes": [
-    "首页顶部留白与整体精细度调整",
-    "Hero 使用确认横版图片资产",
-    "应用图标与桌面小组件按效果图修正"
-  ],
-  "apkSizeBytes": 57277335
+    "enabled":  true,
+    "published":  true,
+    "versionName":  "1.0.0.15",
+    "versionCode":  1015,
+    "apkUrl":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.15/KuaiLeLaoJia.apk",
+    "sha256":  "5ae55d7a5cc4e6d01c3389b2d62bb21a63b946fd85553ff28bc60e090c349be0",
+    "forceUpdate":  false,
+    "releaseNotes":  [
+                         "Restore confirmed homepage structure and source wiring",
+                         "Restore manual software update entry",
+                         "Refine widget hierarchy and compact action button"
+                     ],
+    "apkSizeBytes":  57287137
 }
