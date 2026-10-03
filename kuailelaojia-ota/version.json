@@ -1,15 +1,15 @@
 {
     "enabled":  true,
     "published":  true,
-    "versionName":  "1.0.0.19",
-    "versionCode":  1019,
-    "apkUrl":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.19/KuaiLeLaoJia.apk",
-    "sha256":  "84e7c6d359e1413e6590eb6d07ea567b186fa1a858aa664706637b84f5f110bf",
+    "versionName":  "1.0.0.20",
+    "versionCode":  1020,
+    "apkUrl":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.20/KuaiLeLaoJia.apk",
+    "sha256":  "adac4f87d6955ec84baca0c302ef740456c7fa6966fd1d7f420c68a7ad770a8c",
     "forceUpdate":  false,
     "releaseNotes":  [
-                         "报告支持本地离线识别，核对并修改后保存",
-                         "指标按报告实际项目展示，新增年度筛选及按单位查看趋势",
-                         "优化记录编辑、Widget日期按钮与三页标题，保留历史数据"
+                         "优化手动录入和图片识别核对，常用项目只需填写数值",
+                         "统一年月日选择，档案隐藏筛选，改善趋势单位处理",
+                         "更新老甲小组件，新增智慧识别模型管理与增量更新支持"
                      ],
-    "apkSizeBytes":  115074345
+    "apkSizeBytes":  115158410
 }
