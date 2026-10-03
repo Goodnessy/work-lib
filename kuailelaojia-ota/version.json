@@ -11,5 +11,13 @@
                          "统一年月日选择，档案隐藏筛选，改善趋势单位处理",
                          "更新老甲小组件，新增智慧识别模型管理与增量更新支持"
                      ],
-    "apkSizeBytes":  115158410
+    "apkSizeBytes":  115158410,
+    "delta":  {
+                  "baseVersionCode":  1019,
+                  "sha256":  "829ef1cb4d2f3601a1d539af1b995dd74c7d636d3b89b6474311aa0a03d14472",
+                  "sizeBytes":  886607,
+                  "baseSha256":  "84e7c6d359e1413e6590eb6d07ea567b186fa1a858aa664706637b84f5f110bf",
+                  "url":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.20/KuaiLeLaoJia.delta.gz",
+                  "format":  "ljdp1"
+              }
 }
