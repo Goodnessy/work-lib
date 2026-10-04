@@ -1,23 +1,23 @@
 {
     "enabled":  true,
     "published":  true,
-    "versionName":  "1.0.0.20",
-    "versionCode":  1020,
-    "apkUrl":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.20/KuaiLeLaoJia.apk",
-    "sha256":  "adac4f87d6955ec84baca0c302ef740456c7fa6966fd1d7f420c68a7ad770a8c",
+    "versionName":  "1.0.0.21",
+    "versionCode":  1021,
+    "apkUrl":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.21/KuaiLeLaoJia.apk",
+    "sha256":  "050e84a7c0360d697adf289e032c4fb22ab7ed34949e99a7f92339d859816258",
     "forceUpdate":  false,
     "releaseNotes":  [
-                         "优化手动录入和图片识别核对，常用项目只需填写数值",
-                         "统一年月日选择，档案隐藏筛选，改善趋势单位处理",
-                         "更新老甲小组件，新增智慧识别模型管理与增量更新支持"
+                         "优化桌面小组件的角色比例、阴影层级、药量显示与未配置状态",
+                         "完善年度趋势筛选、单条记录展示、点位信息及页面留白",
+                         "修正首页角色裁切，完成模拟器页面与本地 OCR 模型推理验证"
                      ],
-    "apkSizeBytes":  115158410,
+    "apkSizeBytes":  115171331,
     "delta":  {
-                  "baseVersionCode":  1019,
-                  "sha256":  "829ef1cb4d2f3601a1d539af1b995dd74c7d636d3b89b6474311aa0a03d14472",
-                  "sizeBytes":  886607,
-                  "baseSha256":  "84e7c6d359e1413e6590eb6d07ea567b186fa1a858aa664706637b84f5f110bf",
-                  "url":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.20/KuaiLeLaoJia.delta.gz",
+                  "baseVersionCode":  1020,
+                  "sha256":  "04b06962589baed2e9fba920d20eea5a524a5840ddd89f9101ea576013060084",
+                  "sizeBytes":  863337,
+                  "baseSha256":  "adac4f87d6955ec84baca0c302ef740456c7fa6966fd1d7f420c68a7ad770a8c",
+                  "url":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.21/KuaiLeLaoJia.delta.gz",
                   "format":  "ljdp1"
               }
 }
