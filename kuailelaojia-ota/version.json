@@ -1,23 +1,15 @@
 {
     "enabled":  true,
     "published":  true,
-    "versionName":  "1.0.0.22",
-    "versionCode":  1022,
-    "apkUrl":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.22/KuaiLeLaoJia.apk",
-    "sha256":  "83ee5e5682de77de5555b4bb0fa599e3ce93a9398f48b8e7b28ecae528aea194",
+    "versionName":  "1.0.0.23",
+    "versionCode":  1023,
+    "apkUrl":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.23/KuaiLeLaoJia.apk",
+    "sha256":  "7ac595ce626163c7646e89d26ec41e94676fbaa660d34baa6f55e226572abd35",
     "forceUpdate":  false,
     "releaseNotes":  [
-                         "调整桌面小组件整体资产、日期对齐和按钮布局",
-                         "精简记录页，移除重复筛选、说明和最近历史",
-                         "简化甲功档案列表，放大报告附件并统一指标顺序"
+                         "修复报告结果与参考范围混淆，支持跨行项目和区间及置信度核对",
+                         "核对页显示指标、结果、单位、参考范围和异常标记，全部可修改",
+                         "等比例放大桌面组件并校正日期、药量和操作区域"
                      ],
-    "apkSizeBytes":  115615647,
-    "delta":  {
-                  "baseVersionCode":  1021,
-                  "sha256":  "c3f97e59bede01a3aa1cbe4d61f82f56474f50bd2b84d4336d50afcd495f52c4",
-                  "sizeBytes":  1327187,
-                  "baseSha256":  "050e84a7c0360d697adf289e032c4fb22ab7ed34949e99a7f92339d859816258",
-                  "url":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.22/KuaiLeLaoJia.delta.gz",
-                  "format":  "ljdp1"
-              }
+    "apkSizeBytes":  115638871
 }
