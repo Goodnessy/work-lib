@@ -1,15 +1,15 @@
 {
     "enabled":  true,
     "published":  true,
-    "versionName":  "1.0.0.23",
-    "versionCode":  1023,
-    "apkUrl":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.23/KuaiLeLaoJia.apk",
-    "sha256":  "7ac595ce626163c7646e89d26ec41e94676fbaa660d34baa6f55e226572abd35",
+    "versionName":  "1.0.0.24",
+    "versionCode":  1024,
+    "apkUrl":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.24/KuaiLeLaoJia.apk",
+    "sha256":  "6301260ed269cd8468a91bd944ab5c3b6481f8048a5c2ab9b8bc79665b57bdbd",
     "forceUpdate":  false,
     "releaseNotes":  [
-                         "修复报告结果与参考范围混淆，支持跨行项目和区间及置信度核对",
-                         "核对页显示指标、结果、单位、参考范围和异常标记，全部可修改",
-                         "等比例放大桌面组件并校正日期、药量和操作区域"
+                         "优化桌面小组件自适应尺寸与排版",
+                         "统一字号、文字对齐与区域间距",
+                         "优化老甲与背景融合、按钮配色和圆角"
                      ],
-    "apkSizeBytes":  115638871
+    "apkSizeBytes":  115639611
 }
