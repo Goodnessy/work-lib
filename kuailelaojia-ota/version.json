@@ -1,15 +1,23 @@
 {
     "enabled":  true,
     "published":  true,
-    "versionName":  "1.0.0.24",
-    "versionCode":  1024,
-    "apkUrl":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.24/KuaiLeLaoJia.apk",
-    "sha256":  "6301260ed269cd8468a91bd944ab5c3b6481f8048a5c2ab9b8bc79665b57bdbd",
+    "versionName":  "1.0.0.25",
+    "versionCode":  1025,
+    "apkUrl":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.25/KuaiLeLaoJia.apk",
+    "sha256":  "f69ea34b3e0e8b7e4d7e39c628da81f09065938042ace12ea4ef802f12c5e9e5",
     "forceUpdate":  false,
     "releaseNotes":  [
-                         "优化桌面小组件自适应尺寸与排版",
-                         "统一字号、文字对齐与区域间距",
-                         "优化老甲与背景融合、按钮配色和圆角"
+                         "新增用药记录日历，可查看真实历史用药记录",
+                         "桌面小组件重绘并同步当日用药状态",
+                         "首页、用药记录与桌面小组件统一使用同一份本地用药记录数据"
                      ],
-    "apkSizeBytes":  115639611
+    "apkSizeBytes":  115672099,
+    "delta":  {
+                  "format":  "ljdp1",
+                  "baseVersionCode":  1024,
+                  "baseSha256":  "6301260ed269cd8468a91bd944ab5c3b6481f8048a5c2ab9b8bc79665b57bdbd",
+                  "url":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.25/KuaiLeLaoJia-1.0.0.24-to-1.0.0.25.ljdp1",
+                  "sha256":  "671a8270b50e05d9a1996db67b11f48e33ab88cd8594c36e86f1f9f3f5fb2162",
+                  "sizeBytes":  923762
+              }
 }
