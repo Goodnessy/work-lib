@@ -1,15 +1,13 @@
 {
     "enabled":  true,
     "published":  true,
-    "versionName":  "1.0.0.26",
-    "versionCode":  1026,
-    "apkUrl":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.26/KuaiLeLaoJia.apk",
-    "sha256":  "ee832b1afe83e3821978871554d0488c1040028fa937184f49338aecb03ae81d",
+    "versionName":  "1.0.0.27",
+    "versionCode":  1027,
+    "apkUrl":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.27/KuaiLeLaoJia.apk",
+    "sha256":  "0c3dd979a1cfb6b076063d56c2c5f9a9a10abea6c64aef9a3367ed0a1c6fcb88",
     "forceUpdate":  false,
     "releaseNotes":  [
-                         "首页用药打卡卡片重新设计，与桌面小组件统一信息层级",
-                         "桌面小组件提升本周圆环、日期和用药状态的可读性与提醒感",
-                         "优化添加群聊海报展示，并修复进入页面闪退问题"
+                         "优化添加群聊页面的微信二维码识别提示文案"
                      ],
-    "apkSizeBytes":  110672945
+    "apkSizeBytes":  109968155
 }
