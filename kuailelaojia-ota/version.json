@@ -1,13 +1,13 @@
 {
     "enabled":  true,
     "published":  true,
-    "versionName":  "1.0.0.28",
-    "versionCode":  1028,
-    "apkUrl":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.28/KuaiLeLaoJia.apk",
-    "sha256":  "8567db045c0d0f182932572be2093ca8ef645f8576a49f00b539a3f4ca87919e",
+    "versionName":  "1.0.0.29",
+    "versionCode":  1029,
+    "apkUrl":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.29/KuaiLeLaoJia.apk",
+    "sha256":  "d01211bdd0d0f83cd14285029aa82ae9d09841a65bad01d1c8bb9a38d004530a",
     "forceUpdate":  false,
     "releaseNotes":  [
-                         "优化分享安装包体积，保留本地 OCR 与常用 ARM 设备兼容"
+                         "新增每周药量和交替服用两种药量设置方式"
                      ],
-    "apkSizeBytes":  52686578
+    "apkSizeBytes":  52709946
 }
