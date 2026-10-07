@@ -1,13 +1,13 @@
 {
-  "enabled": true,
-  "published": true,
-  "versionName": "1.0.0.32",
-  "versionCode": 1032,
-  "apkUrl": "https://gh-proxy.org/https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.32/KuaiLeLaoJia.apk",
-  "sha256": "97eabd160c6b56405b72eea0e28a66f4eb9336e7f1cec10629ef6501e195dc70",
-  "forceUpdate": false,
-  "releaseNotes": [
-    "完善一键添加桌面小组件：增加系统确认、成功回调与状态提示"
-  ],
-  "apkSizeBytes": 52714244
+    "enabled":  true,
+    "published":  true,
+    "versionName":  "1.0.0.33",
+    "versionCode":  1033,
+    "apkUrl":  "https://gh-proxy.org/https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.33/KuaiLeLaoJia.apk",
+    "sha256":  "4c51faf00807e726f790ecb285271195573a7430d899333cac02f1a53704c192",
+    "forceUpdate":  false,
+    "releaseNotes":  [
+                         "完善一键添加桌面小组件：增加系统确认、成功回调与状态提示"
+                     ],
+    "apkSizeBytes":  52714536
 }
