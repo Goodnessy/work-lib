@@ -1,13 +1,13 @@
 {
-    "enabled":  true,
-    "published":  true,
-    "versionName":  "1.0.0.30",
-    "versionCode":  1030,
-    "apkUrl":  "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.30/KuaiLeLaoJia.apk",
-    "sha256":  "f4cbecc371427e3d3ef1a88a64caeb23bc64dbf75fd2a065526d5aa27233ca39",
-    "forceUpdate":  false,
-    "releaseNotes":  [
-                         "新增一键添加桌面小组件，默认 4×1 横版"
-                     ],
-    "apkSizeBytes":  52711820
+  "enabled": true,
+  "published": true,
+  "versionName": "1.0.0.30",
+  "versionCode": 1030,
+  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/laojia-v1.0.0.30/KuaiLeLaoJia.apk",
+  "sha256": "9d08e50a67216b20b47e3471c58474c7492e70546d24e856e5bf7c0f8c536a2a",
+  "forceUpdate": false,
+  "releaseNotes": [
+    "新增一键添加桌面小组件，默认 4×1 横版"
+  ],
+  "apkSizeBytes": 52711714
 }
