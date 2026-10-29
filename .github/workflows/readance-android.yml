@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
@@ -34,3 +34,21 @@ jobs:
           path: app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
           retention-days: 30
+      - name: Publish permanent direct-download GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          TAG="readance-android-v0.3-google-login"
+          APK="Readance-v0.3-Google-Login.apk"
+          cp app/build/outputs/apk/debug/app-debug.apk "$APK"
+          if ! gh release view "$TAG" >/dev/null 2>&1; then
+            gh release create "$TAG" --target "$GITHUB_SHA" \
+              --title "Readance Android V0.3 (Google login)" \
+              --notes "Unofficial Readance Android personal launcher. Uses Chrome Custom Tabs for Google login. Debug-signed APK; Android 7+. Uninstall the previous debug build before installing." \
+              --prerelease
+          fi
+          gh release upload "$TAG" "$APK" --clobber
+          gh release view "$TAG" --json url,assets
