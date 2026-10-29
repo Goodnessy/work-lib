@@ -23,14 +23,14 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.10.2'
-      - name: Build unsigned debug APK (Android debug signing)
+      - name: Build debug APK
         run: gradle --no-daemon --stacktrace :app:assembleDebug
       - name: Verify APK exists
         run: test -s app/build/outputs/apk/debug/app-debug.apk && sha256sum app/build/outputs/apk/debug/app-debug.apk
       - name: Publish installable APK
         uses: actions/upload-artifact@v4
         with:
-          name: Readance-v0.2-Android-APK
+          name: Readance-v0.3-Google-Login-APK
           path: app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
           retention-days: 30
