@@ -28,6 +28,7 @@ public class MainActivity extends Activity {
     private WebView authPopup;
     private LinearLayout popupPanel;
     private TextView popupHost;
+    private boolean authFlowActive = false;
 
     @Override
     public void onCreate(Bundle state) {
@@ -139,10 +140,16 @@ public class MainActivity extends Activity {
     }
 
     private boolean navigateMain(Uri uri, String current) {
-        if (isReadance(uri) || "about".equalsIgnoreCase(uri.getScheme())) return false;
-        // Credentials and OAuth callbacks must remain in the WebView cookie context.
-        // Do not send them to an ordinary browser, which cannot share WebView cookies.
-        if (isHttp(uri) && (isAuthContext(current) || isAuthProvider(uri))) return false;
+        if (isReadance(uri)) {
+            if (authFlowActive && !isAuthContext(uri.toString())) authFlowActive = false;
+            return false;
+        }
+        if ("about".equalsIgnoreCase(uri.getScheme())) return false;
+        // Keep every redirect of the authentication flow in the same cookie store.
+        if (isHttp(uri) && (isAuthContext(current) || authFlowActive || isAuthProvider(uri))) {
+            authFlowActive = true;
+            return false;
+        }
         openExternal(uri);
         return true;
     }
@@ -222,7 +229,8 @@ public class MainActivity extends Activity {
 
     private boolean popupNavigate(Uri uri, boolean fromLogin) {
         if (isReadance(uri) || "about".equalsIgnoreCase(uri.getScheme())) return false;
-        if (isHttp(uri) && (fromLogin || isAuthProvider(uri))) return false;
+        // Popup windows stay in the app, including multi-step identity provider redirects.
+        if (isHttp(uri)) return false;
         openExternal(uri);
         closePopup(false);
         return true;
