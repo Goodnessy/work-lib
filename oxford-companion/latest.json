@@ -1,8 +1,8 @@
 {
-  "versionCode": 5,
-  "versionName": "0.5.0",
-  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/oxford-v0.5.0/app-release.apk",
-  "sha256": "53671a0fabb89e3845756793e7819a533d3b26e040d2ca278ab1f1934117c7a9",
+  "versionCode": 6,
+  "versionName": "0.5.1",
+  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/oxford-v0.5.1/OxfordCompanion-v0.5.1.apk",
+  "sha256": "ef062e2706957d94060e20655b68e12a0322ef28152da95d9e8284b3db91f1af",
   "signerSha256": "c919e63bc4c12c5c8d9caf49a8d829bc54f7109c4f44c4e2b663d21e41ce82c0",
   "notes": "牛津伴读应用更新：保留书库、编号和听读进度。"
 }
