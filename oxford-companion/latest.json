@@ -1,18 +1,17 @@
 {
-  "versionCode": 14,
-  "versionName": "0.5.9",
-  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/oxford-v0.5.9/OxfordCompanion-v0.5.9.apk",
-  "sha256": "c779ca1989a9381c586bb7668a64c8b25909ff1ca6725909264cbdfbbbc5d355",
+  "versionCode": 15,
+  "versionName": "0.6.0",
+  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/oxford-v0.6.0/OxfordCompanion-v0.6.0.apk",
+  "sha256": "6a8fda9bb68cf77b043b228638d6f660364fb0fdb2cfe51b19ceab3df99aef68",
   "signerSha256": "c919e63bc4c12c5c8d9caf49a8d829bc54f7109c4f44c4e2b663d21e41ce82c0",
-  "apkSizeBytes": 18982683,
+  "apkSizeBytes": 18985939,
   "releaseNotes": [
-    "修复旧导入文件索引：核查有效音频、管理导入文件夹和清理不可用记录",
-    "AI 字幕统计和书库只使用当前有效文件，保留历史字幕",
-    "收听历史识别已移除音频，支持长按删除及批量清理失效记录",
-    "字幕原文保持原声语言，中文统一显示简体并改善自然断句",
-    "播放器支持原文、中文、English 三种字幕与独立永久本地缓存",
-    "统一适配 Android 状态栏、挖孔屏与底部导航安全区域",
-    "新增隐藏错误封面功能，不影响书籍和音频数据"
+    "拍封面识别后先确认绘本，搜索书名优先，确认即开始播放",
+    "播放器新增拍下一本；单本播放结束显示继续听读选择",
+    "新建 4×2 桌面随机熏听组件：绘本、逐句字幕及右侧四键控制",
+    "桌面小组件支持一键随机、播放暂停、随机下一本、拍照识别",
+    "片头片尾可按来源文件夹独立设置，支持子文件夹继承和全局默认",
+    "保留原有书库、模型、字幕及听读记录"
   ],
-  "notes": "修复失效文件索引与字幕总量，新增三语言字幕缓存、历史清理和全局安全区适配。保留已有数据、Groq 配置和本地模型。"
+  "notes": "新增随机熏听桌面组件和拍封面连续阅读流程，支持按音频文件夹跳过片头片尾；保留既有数据。"
 }
