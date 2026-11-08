@@ -1,16 +1,17 @@
 {
-  "versionCode": 16,
-  "versionName": "0.6.1",
-  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/oxford-v0.6.1/OxfordCompanion-v0.6.1.apk",
-  "sha256": "64287920ef1d5fbe00c6cba11229af38563766874c87fc5c06e1b5fed1c6d1d7",
+  "versionCode": 17,
+  "versionName": "0.6.2",
+  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/oxford-v0.6.2/OxfordCompanion-v0.6.2.apk",
+  "sha256": "fae909ffe424d35f3c6a7bf38e6dfa15adc11ba592572f7eb34835b9fdf0ca0c",
   "signerSha256": "c919e63bc4c12c5c8d9caf49a8d829bc54f7109c4f44c4e2b663d21e41ce82c0",
-  "apkSizeBytes": 18985939,
+  "apkSizeBytes": 18987544,
   "releaseNotes": [
-    "修复拍照识别连续多行书名、局部拼写误差导致的漏匹配",
-    "识别相似书名时优先完整书名，保留绘本确认步骤",
-    "自动恢复连写书名的英文空格，改善封面检索和书名显示",
-    "扩展牛津树常见作者与出版社书目检索规则",
-    "保留已有封面、手工封面、音频、字幕和收听记录"
+    "优化4×2小组件封面、默认图标、文字留白和窄控制栏，保留原有四按钮顺序",
+    "小组件读取播放器字幕开关和语言缓存，改善封面显示清晰度",
+    "封面批次显示已处理、成功、失败、剩余及运行状态，防止重复启动",
+    "新增19本官方单本ISBN索引与官方图片优先、ISBN后备查询，收紧相似书名误配",
+    "离线Whisper改用整段音轨上下文和模型原生时间戳，保留已有字幕与Groq缓存",
+    "保留原拍照确认播放流程及临时照片清理，不自动保存拍照封面"
   ],
-  "notes": "优化拍照书名匹配及在线封面查找，优先检索正确的牛津树书籍版本。在线封面覆盖率受图书数据库限制。"
+  "notes": "本次优先交付小组件、批次进度和离线字幕链路改进。封面覆盖率尚无提升实测，官方图片在开发环境返回403；未声明剩余拍照漏匹配已修复。离线识别准确度、长音轨内存与实际播放同步需安装后验证；暂停在当前整段推理结束后生效。"
 }
