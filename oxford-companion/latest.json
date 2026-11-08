@@ -1,17 +1,16 @@
 {
-  "versionCode": 15,
-  "versionName": "0.6.0",
-  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/oxford-v0.6.0/OxfordCompanion-v0.6.0.apk",
-  "sha256": "6a8fda9bb68cf77b043b228638d6f660364fb0fdb2cfe51b19ceab3df99aef68",
+  "versionCode": 16,
+  "versionName": "0.6.1",
+  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/oxford-v0.6.1/OxfordCompanion-v0.6.1.apk",
+  "sha256": "64287920ef1d5fbe00c6cba11229af38563766874c87fc5c06e1b5fed1c6d1d7",
   "signerSha256": "c919e63bc4c12c5c8d9caf49a8d829bc54f7109c4f44c4e2b663d21e41ce82c0",
   "apkSizeBytes": 18985939,
   "releaseNotes": [
-    "拍封面识别后先确认绘本，搜索书名优先，确认即开始播放",
-    "播放器新增拍下一本；单本播放结束显示继续听读选择",
-    "新建 4×2 桌面随机熏听组件：绘本、逐句字幕及右侧四键控制",
-    "桌面小组件支持一键随机、播放暂停、随机下一本、拍照识别",
-    "片头片尾可按来源文件夹独立设置，支持子文件夹继承和全局默认",
-    "保留原有书库、模型、字幕及听读记录"
+    "修复拍照识别连续多行书名、局部拼写误差导致的漏匹配",
+    "识别相似书名时优先完整书名，保留绘本确认步骤",
+    "自动恢复连写书名的英文空格，改善封面检索和书名显示",
+    "扩展牛津树常见作者与出版社书目检索规则",
+    "保留已有封面、手工封面、音频、字幕和收听记录"
   ],
-  "notes": "新增随机熏听桌面组件和拍封面连续阅读流程，支持按音频文件夹跳过片头片尾；保留既有数据。"
+  "notes": "优化拍照书名匹配及在线封面查找，优先检索正确的牛津树书籍版本。在线封面覆盖率受图书数据库限制。"
 }
