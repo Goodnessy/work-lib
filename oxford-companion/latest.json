@@ -1,8 +1,17 @@
 {
-  "versionCode": 11,
-  "versionName": "0.5.6",
-  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/oxford-v0.5.6/OxfordCompanion-v0.5.6.apk",
-  "sha256": "e76860f9930e539b2e3b15942201483632fcdd5b1d99630c16c2e68b39c3404f",
+  "versionCode": 12,
+  "versionName": "0.5.7",
+  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/oxford-v0.5.7/OxfordCompanion-v0.5.7.apk",
+  "sha256": "f610835b374290b5602e3d56023d96ae58ca22056e16296aba73028934d97ca9",
   "signerSha256": "c919e63bc4c12c5c8d9caf49a8d829bc54f7109c4f44c4e2b663d21e41ce82c0",
-  "notes": "牛津伴读应用更新：保留书库、编号和听读进度。"
+  "apkSizeBytes": 18669053,
+  "releaseNotes": [
+    "新增 Groq 免费云端字幕识别，支持原声语言转写",
+    "新增全书库字幕预生成队列，支持暂停、恢复和失败重试",
+    "书库支持按编号分组，优化排序与筛选控件",
+    "播放器列表改为绘本播放队列",
+    "修复部分文件名编号展示，缺失封面显示软件图标",
+    "优化设置页、模型管理和 OTA 更新界面"
+  ],
+  "notes": "本次更新支持书库字幕批量预生成、Groq 云端识别与书库分组，保留已有数据。"
 }
