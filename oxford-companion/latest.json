@@ -1,14 +1,16 @@
 {
-  "versionCode": 18,
-  "versionName": "0.6.3",
-  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/oxford-v0.6.3/OxfordCompanion-v0.6.3.apk",
-  "sha256": "05053915666237b5fa1dca3d1d899dcc71c42f9277fe9666bbeadba7c56b5e8e",
+  "versionCode": 19,
+  "versionName": "0.6.4",
+  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/oxford-v0.6.4/OxfordCompanion-v0.6.4.apk",
+  "sha256": "c8bfd52a5bb26a2c2d03c872a4473930a24b922401559a4edef8cdcdf9ebec86",
   "signerSha256": "c919e63bc4c12c5c8d9caf49a8d829bc54f7109c4f44c4e2b663d21e41ce82c0",
-  "apkSizeBytes": 18987544,
+  "apkSizeBytes": 19665083,
   "releaseNotes": [
-    "同一本绘本支持多个音频来源文件夹，不再覆盖其他版本",
-    "播放页可以按文件夹切换音频版本，并记住每本书的选择",
-    "兼容原有导入的目录、子目录和字幕缓存，无需重新导入"
+    "支持中文M4A和MP3书名导入、中文搜索及已导入文件夹补充索引",
+    "书库中英文分页展示，课程资源中可手动设置文件夹分类",
+    "封面拍照同时识别中文和英文，保留识别确认流程",
+    "中文封面优先查找同目录同名图片，其次通过图书数据库精确书名匹配",
+    "中文绘本默认不跳过片头片尾，已有文件夹专属设置优先"
   ],
-  "notes": "本版聚焦文件夹音频版本切换。已导入的音频由原始URI恢复归属；真机切换播放及旧书库迁移仍需安装后验收。"
+  "notes": "v0.6.4保留英文索引、字幕和音频版本选择；中文绘本封面覆盖率取决于数据库收录，误配需手动纠正。GitHub编译不等于真机视觉和功能验收。"
 }
