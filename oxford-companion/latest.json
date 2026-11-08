@@ -1,17 +1,18 @@
 {
-  "versionCode": 13,
-  "versionName": "0.5.8",
-  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/oxford-v0.5.8/OxfordCompanion-v0.5.8.apk",
-  "sha256": "441b1473057d0bc8644e538032f3abc3f3f2a5fe384b5762edaf1208028b0843",
+  "versionCode": 14,
+  "versionName": "0.5.9",
+  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/oxford-v0.5.9/OxfordCompanion-v0.5.9.apk",
+  "sha256": "c779ca1989a9381c586bb7668a64c8b25909ff1ca6725909264cbdfbbbc5d355",
   "signerSha256": "c919e63bc4c12c5c8d9caf49a8d829bc54f7109c4f44c4e2b663d21e41ce82c0",
-  "apkSizeBytes": 18966299,
+  "apkSizeBytes": 18982683,
   "releaseNotes": [
-    "Groq 免费字幕增加请求限速、额度保护与后台自动续接",
-    "AI 字幕页面分为进度、模型选择、云端配置和本地模型管理",
-    "首页整合我的阅读：继续听、我的书库与收听历史",
-    "播放器使用连续字幕阅读区，播放控制固定在底部",
-    "书库简化为封面展示，排序筛选分组统一收进整理面板",
-    "统一页面色彩、圆角、图标与控件层级，减少卡片堆叠"
+    "修复旧导入文件索引：核查有效音频、管理导入文件夹和清理不可用记录",
+    "AI 字幕统计和书库只使用当前有效文件，保留历史字幕",
+    "收听历史识别已移除音频，支持长按删除及批量清理失效记录",
+    "字幕原文保持原声语言，中文统一显示简体并改善自然断句",
+    "播放器支持原文、中文、English 三种字幕与独立永久本地缓存",
+    "统一适配 Android 状态栏、挖孔屏与底部导航安全区域",
+    "新增隐藏错误封面功能，不影响书籍和音频数据"
   ],
-  "notes": "本次重点更新 Groq 免费任务调度、连续字幕阅读器和首页/书库视觉结构，保留已有数据与离线模型。"
+  "notes": "修复失效文件索引与字幕总量，新增三语言字幕缓存、历史清理和全局安全区适配。保留已有数据、Groq 配置和本地模型。"
 }
