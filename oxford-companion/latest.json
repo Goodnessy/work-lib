@@ -1,15 +1,16 @@
 {
-  "versionCode": 20,
-  "versionName": "0.6.5",
-  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/oxford-v0.6.5/OxfordCompanion-v0.6.5.apk",
-  "sha256": "5f6356ba0ed29f1ceb918ea8578ff9ffb54d39cd8188c8a00902ec4acf971b7b",
+  "versionCode": 21,
+  "versionName": "0.6.6",
+  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/oxford-v0.6.6/OxfordCompanion-v0.6.6.apk",
+  "sha256": "831996627f14e4462aa8ac798237f56aaa66464f8ec984d1010bbd74aaa2e8c3",
   "signerSha256": "c919e63bc4c12c5c8d9caf49a8d829bc54f7109c4f44c4e2b663d21e41ce82c0",
-  "apkSizeBytes": 19665083,
+  "apkSizeBytes": 19665187,
   "releaseNotes": [
-    "新增B站和小红书在线绘本音频搜索入口，搜索词自动清理常见课程编号",
-    "支持手动选择已获授权的本地音频或视频，兼容AAC音轨的视频可提取为M4A",
-    "音频保存在Music/牛津伴读/在线音频目录，并自动关联当前绘本",
-    "保留原有书库、字幕与文件夹音频版本选择，已保存的音频可离线使用"
+    "修复课程编号及中文附注影响书名显示、中文拍照匹配和中英文书库分类",
+    "新增单本绘本语言调整，同时保留原始文件名、书籍ID和历史记录",
+    "字幕缓存按音频文件隔离，旧字幕保留并迁移到当前选用的音频版本",
+    "在线保存不同来源的音频版本独立管理，避免同一平台的重复收藏互相覆盖",
+    "新收藏音频默认不跳过片头片尾；完善封面进度、失败诊断和桌面小组件布局"
   ],
-  "notes": "v0.6.5不直接下载B站或小红书分享链接。需用户在平台许可下自行获得媒体并在文件选择器中确认保存。只为支持AAC的视频生成M4A，非AAC音轨可能无法转换；提取不删除用户原有视频文件。真机验证仍待完成。"
+  "notes": "v0.6.6修复基础识别和缓存关联；在线B站/小红书仍需用户自行获取可保存文件。牛津树完整官方封面数据及本地Whisper效果需真机验证，编译不等于真机功能或视觉通过。"
 }
