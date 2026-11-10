@@ -1,16 +1,15 @@
 {
-  "versionCode": 24,
-  "versionName": "0.6.9",
-  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/oxford-v0.6.9/OxfordCompanion-v0.6.9.apk",
-  "sha256": "3216d97c0937a04a34dcd0190a2d2ff8ad002775fdc2b56f3a31fbd541fa73ce",
+  "versionCode": 25,
+  "versionName": "0.6.10",
+  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/oxford-v0.6.10/OxfordCompanion-v0.6.10.apk",
+  "sha256": "e12286ebc4d71409fd8d9b308fce8d348fc6e1460df95aadda88c0298d172af1",
   "signerSha256": "c919e63bc4c12c5c8d9caf49a8d829bc54f7109c4f44c4e2b663d21e41ce82c0",
-  "apkSizeBytes": 25799774,
+  "apkSizeBytes": 25821426,
   "releaseNotes": [
-    "支持绘本合并与拆分，分开保存各音频版本的续听进度",
-    "支持 ISBN 查找、封面候选、模拟封面与批量导入",
-    "完善在线音频保存、重复检测和绘本关联",
-    "修正分集字幕高亮与小组件同步，完善批量字幕续接",
-    "统一首页、搜索、资源、设置和小组件的部分样式"
+    "重做拍照找书失败页，突出重拍和封面候选",
+    "新增 ISBN 结果页，显示书号、查询状态和本地音频匹配",
+    "补充屁屁侦探、屁屁老爹和不一样的卡梅拉分册书号",
+    "优化封面管理页面和封面匹配状态"
   ],
-  "notes": "v0.6.9更新绘本、音频、封面和字幕体验。"
+  "notes": "v0.6.10 更新拍照找书、ISBN 识别和封面管理。"
 }
