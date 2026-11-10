@@ -1,16 +1,16 @@
 {
-  "versionCode": 22,
-  "versionName": "0.6.7",
-  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/oxford-v0.6.7/OxfordCompanion-v0.6.7.apk",
-  "sha256": "e11231e7f79f0302f7f953c86caceacf1c0c2963c2689149ec2efbf2a90630b5",
+  "versionCode": 24,
+  "versionName": "0.6.9",
+  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/oxford-v0.6.9/OxfordCompanion-v0.6.9.apk",
+  "sha256": "3216d97c0937a04a34dcd0190a2d2ff8ad002775fdc2b56f3a31fbd541fa73ce",
   "signerSha256": "c919e63bc4c12c5c8d9caf49a8d829bc54f7109c4f44c4e2b663d21e41ce82c0",
-  "apkSizeBytes": 19681571,
+  "apkSizeBytes": 25799774,
   "releaseNotes": [
-    "修复屁屁侦探等中文绘本上下集、第一二三集的音频归组与续播",
-    "修复33_等文件编号影响书名显示、书库匹配和拍照识别",
-    "中文拍照识别增加封面标题局部增强重试及系列名、故事名匹配",
-    "支持将亲自确认的实体封面与音频绑定，之后在本机通过图片辅助识别",
-    "识别失败可按封面选择，家长可查看OCR原文并关联一次"
+    "支持绘本合并与拆分，分开保存各音频版本的续听进度",
+    "支持 ISBN 查找、封面候选、模拟封面与批量导入",
+    "完善在线音频保存、重复检测和绘本关联",
+    "修正分集字幕高亮与小组件同步，完善批量字幕续接",
+    "统一首页、搜索、资源、设置和小组件的部分样式"
   ],
-  "notes": "v0.6.7重点修复卡梅拉与屁屁侦探；不改动原音频文件。中文OCR仍受反光与艺术字体影响，首次未命中可由家长确认一次，后续保留本机视觉参考。旧历史与字幕尽量保留。"
+  "notes": "v0.6.9更新绘本、音频、封面和字幕体验。"
 }
