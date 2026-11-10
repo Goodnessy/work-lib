@@ -1,15 +1,17 @@
 {
-  "versionCode": 25,
-  "versionName": "0.6.10",
-  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/oxford-v0.6.10/OxfordCompanion-v0.6.10.apk",
-  "sha256": "e12286ebc4d71409fd8d9b308fce8d348fc6e1460df95aadda88c0298d172af1",
+  "versionCode": 26,
+  "versionName": "0.6.11",
+  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/oxford-v0.6.11/OxfordCompanion-v0.6.11.apk",
+  "sha256": "4e134175c89142a0eb011afcc2e200a87d6787f44b05ad29623cfffd0e57e48c",
   "signerSha256": "c919e63bc4c12c5c8d9caf49a8d829bc54f7109c4f44c4e2b663d21e41ce82c0",
-  "apkSizeBytes": 25821426,
+  "apkSizeBytes": 25822114,
   "releaseNotes": [
-    "重做拍照找书失败页，突出重拍和封面候选",
-    "新增 ISBN 结果页，显示书号、查询状态和本地音频匹配",
-    "补充屁屁侦探、屁屁老爹和不一样的卡梅拉分册书号",
-    "优化封面管理页面和封面匹配状态"
+    "性能修复：封面缩略图后台加载、减少反复重绘和页面整页刷新",
+    "书库优化：分批加载书架，修复后台封面匹配时自动跳回顶部",
+    "搜索优化：输入防抖，减少大批量视图重建",
+    "封面增强：ISBN书目索引复用，增加可信书店封面获取与缓存",
+    "书库整理：统一部分中文绘本显示名称和系列分组，不修改原音频",
+    "首页调整：拍绘本封面与扫ISBN条码改为等宽并列入口"
   ],
-  "notes": "v0.6.10 更新拍照找书、ISBN 识别和封面管理。"
+  "notes": "v0.6.11 性能与书库封面专项优化，保留现有数据和扫描流程。"
 }
