@@ -1,17 +1,15 @@
 {
-  "versionCode": 26,
-  "versionName": "0.6.11",
-  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/oxford-v0.6.11/OxfordCompanion-v0.6.11.apk",
-  "sha256": "4e134175c89142a0eb011afcc2e200a87d6787f44b05ad29623cfffd0e57e48c",
+  "versionCode": 27,
+  "versionName": "0.6.12",
+  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/oxford-v0.6.12/OxfordCompanion-v0.6.12.apk",
+  "sha256": "7da9f1860788009b8b39f956cf16a6dfb710a9265a2fbda65e59b4ff8378c724",
   "signerSha256": "c919e63bc4c12c5c8d9caf49a8d829bc54f7109c4f44c4e2b663d21e41ce82c0",
-  "apkSizeBytes": 25822114,
+  "apkSizeBytes": 62227861,
   "releaseNotes": [
-    "性能修复：封面缩略图后台加载、减少反复重绘和页面整页刷新",
-    "书库优化：分批加载书架，修复后台封面匹配时自动跳回顶部",
-    "搜索优化：输入防抖，减少大批量视图重建",
-    "封面增强：ISBN书目索引复用，增加可信书店封面获取与缓存",
-    "书库整理：统一部分中文绘本显示名称和系列分组，不修改原音频",
-    "首页调整：拍绘本封面与扫ISBN条码改为等宽并列入口"
+    "封面新增：内置291张对应单册绘本的研究封面预览",
+    "精准匹配：按完整书名与别名匹配，多个音频版本共用封面",
+    "保护已有设置：手动封面优先，不改音频文件、字幕及历史",
+    "匹配失败：保留原有模拟封面与在线查询机制"
   ],
-  "notes": "v0.6.11 性能与书库封面专项优化，保留现有数据和扫描流程。"
+  "notes": "v0.6.12 绘本封面资源与书名匹配专项，保留现有数据和播放流程。"
 }
