@@ -1,15 +1,16 @@
 {
-  "versionCode": 27,
-  "versionName": "0.6.12",
-  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/oxford-v0.6.12/OxfordCompanion-v0.6.12.apk",
-  "sha256": "7da9f1860788009b8b39f956cf16a6dfb710a9265a2fbda65e59b4ff8378c724",
+  "versionCode": 28,
+  "versionName": "0.6.13",
+  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/oxford-v0.6.13/OxfordCompanion-v0.6.13.apk",
+  "sha256": "86984ef4c933c19f2e780df98d57ab0a0a7cc599d6f5a5f2165e685a5eac629d",
   "signerSha256": "c919e63bc4c12c5c8d9caf49a8d829bc54f7109c4f44c4e2b663d21e41ce82c0",
-  "apkSizeBytes": 62227861,
+  "apkSizeBytes": 62244245,
   "releaseNotes": [
-    "封面新增：内置291张对应单册绘本的研究封面预览",
-    "精准匹配：按完整书名与别名匹配，多个音频版本共用封面",
-    "保护已有设置：手动封面优先，不改音频文件、字幕及历史",
-    "匹配失败：保留原有模拟封面与在线查询机制"
+    "屁屁侦探：根据已校验书目将两个故事的上下集正确关联为一本实体书",
+    "不一样的卡梅拉：按单册故事标题独立归组",
+    "本书音频：显示音频列表、点播与长按拖动调整顺序",
+    "播放器上一首、下一首优先切换当前书内音频",
+    "保留原始文件、字幕缓存、封面和历史记录"
   ],
-  "notes": "v0.6.12 绘本封面资源与书名匹配专项，保留现有数据和播放流程。"
+  "notes": "v0.6.13 多故事归组、卡梅拉独立成册、本书音频点播及排序专项。"
 }
