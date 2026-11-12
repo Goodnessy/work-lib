@@ -1,15 +1,16 @@
 {
-  "versionCode": 29,
-  "versionName": "0.6.14",
-  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/oxford-v0.6.14/OxfordCompanion-v0.6.14.apk",
-  "sha256": "948c9fcb704e9340baf64e2301581034048541d289663cba236d73575f7e39b7",
+  "versionCode": 30,
+  "versionName": "0.6.15",
+  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/oxford-v0.6.15/OxfordCompanion-v0.6.15.apk",
+  "sha256": "a2136b11712ae375e333d5321aa0a6994ce6fbe60d4c315f2994b506ca2c1d6a",
   "signerSha256": "c919e63bc4c12c5c8d9caf49a8d829bc54f7109c4f44c4e2b663d21e41ce82c0",
-  "apkSizeBytes": 62244245,
+  "apkSizeBytes": 62244241,
   "releaseNotes": [
-    "屁屁侦探：跨文件夹汇总同册两个故事，修复每册只显示一个故事的问题",
-    "本书音频：每册默认完整展示两个故事的上下集并按顺序播放",
-    "回归测试：逐册验证九本屁屁侦探各有四段音频",
-    "保留卡梅拉独立成册、多版本音频、音频点播及字幕历史"
+    "播放器：音频读取失败不再误判为听完，显示原因并允许重试",
+    "文件权限：支持重新授权目录或单段音频，不删除原始文件",
+    "识别：增强已手动确认封面的二次识别及候选推荐",
+    "屁屁侦探：完整故事标题匹配，缺段时提示同步文件夹",
+    "保留卡梅拉和牛津树的多版本音频、字幕与收听历史"
   ],
-  "notes": "v0.6.14 修复屁屁侦探不同文件夹来源导致第二个故事不可见的问题。"
+  "notes": "v0.6.15 播放加载恢复、音频权限重新关联、中文封面匹配和屁屁侦探缺段自检专项。"
 }
