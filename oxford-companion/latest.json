@@ -1,16 +1,15 @@
 {
-  "versionCode": 30,
-  "versionName": "0.6.15",
-  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/oxford-v0.6.15/OxfordCompanion-v0.6.15.apk",
-  "sha256": "a2136b11712ae375e333d5321aa0a6994ce6fbe60d4c315f2994b506ca2c1d6a",
+  "versionCode": 31,
+  "versionName": "0.6.16",
+  "apkUrl": "https://github.com/Goodnessy/work-lib/releases/download/oxford-v0.6.16/OxfordCompanion-v0.6.16.apk",
+  "sha256": "f39e01660efdaa80523bf2599eb662daba4c3515872578beb5cefc89a8c1045b",
   "signerSha256": "c919e63bc4c12c5c8d9caf49a8d829bc54f7109c4f44c4e2b663d21e41ce82c0",
-  "apkSizeBytes": 62244241,
+  "apkSizeBytes": 62244245,
   "releaseNotes": [
-    "播放器：音频读取失败不再误判为听完，显示原因并允许重试",
-    "文件权限：支持重新授权目录或单段音频，不删除原始文件",
-    "识别：增强已手动确认封面的二次识别及候选推荐",
-    "屁屁侦探：完整故事标题匹配，缺段时提示同步文件夹",
-    "保留卡梅拉和牛津树的多版本音频、字幕与收听历史"
+    "修复：MP3 在加载准备中被查询时长触发 -38/0 播放器状态错误",
+    "播放稳定性：异步准备完成前不读取时长或调用控制接口",
+    "异常处理：安全释放播放器，不把状态错误解释成音频损坏",
+    "保持原有书库、屁屁侦探归组、封面识别和字幕历史"
   ],
-  "notes": "v0.6.15 播放加载恢复、音频权限重新关联、中文封面匹配和屁屁侦探缺段自检专项。"
+  "notes": "v0.6.16 修复 MP3 异步加载阶段的播放器非法状态错误（-38/0）。"
 }
